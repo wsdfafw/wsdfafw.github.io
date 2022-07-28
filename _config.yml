@@ -9,7 +9,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-author: Alexander01998,waterline
+author: waterline
 
 feed:
   posts_limit: 20
