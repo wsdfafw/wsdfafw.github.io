@@ -19,7 +19,7 @@ feed:
 
 mcversions:
   "snapshots": "Snapshots"
-  "1.19.1": "1.19.84 (1.19.1)"
+  "1.19.1": "1.19.1"
   "1.14_combat-3": "1.14 Combat Test 3"
   "1.12": "1.12 - 1.12.2"
   "1.12 OF": "1.12 - 1.12.2 + OptiFine"
@@ -54,7 +54,7 @@ defaults:
       type: pages
     values:
       layout: default
-      author: Alexander01998
+      author: Alexander01998,waterline
   - scope:
       path: ""
       type: updates
