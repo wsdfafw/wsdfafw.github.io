@@ -4,5 +4,5 @@ category: Command
 labels:
   - stub
 ---
-## Overview
-`.copyitem` is a command that allows you to copy items that other people are holding or wearing. It requires Creative Mode.
+## 概述
+`.copyitem` 是一个命令,允许您复制其他人持有或佩戴的物品,它需要创造模式.
