@@ -74,13 +74,13 @@ google_auto_ads: true
           <div class="margin10 no-margin-left no-margin-right padding10 no-padding-top no-padding-bottom bg-grayLighter {% if page.old_mcversions contains mcversion %}fg-grayLight{% else %}fg-gray{% endif %} set-border">
             <h2 class="{% if page.old_mcversions contains mcversion %}text-light{% endif %}">
               {% if mcversion == "all" %}
-                Latest Wurst Updates
+              最新的香肠更新
               {% elsif mcversion == "snapshots" %}
-                Snapshots, Pre-Releases, etc.
+              快照、预发布等.
               {% else %}
-                Wurst for Minecraft {% if site.mcversions[mcversion] %}{{ site.mcversions[mcversion] }}{% else %}{{ mcversion }}{% endif %}
+                Minecraft {% if site.mcversions[mcversion] %}{{ site.mcversions[mcversion] }}{% else %}{{ mcversion }}{% endif %}的wurst
                 {% if page.old_mcversions contains mcversion %}
-                  <span class="tag fg-white bg-amber" style="cursor: help;vertical-align: baseline;" title="I'm no longer maintaining this version. You can still use it, but any bugs or missing features will not be fixed.">旧</span>
+                  <span class="tag fg-white bg-amber" style="cursor: help;vertical-align: baseline;" title="I'm no longer maintaining this version. You can still use it, but any bugs or missing features will not be fixed.">弃坑</span>
                 {% endif %}
               {% endif %}
             </h2>
