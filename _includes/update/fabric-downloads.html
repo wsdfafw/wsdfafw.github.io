@@ -15,34 +15,34 @@
 		{% capture devlink %}{{ mcxbase }}{{ basepath }}-dev.jar{% endcapture %}
 		{% capture srcdevlink %}{{ mcxbase }}{{ basepath }}-sources-dev.jar{% endcapture %}
 
-		<h4 class="no-margin-bottom">for Minecraft {{ mcversion-range }}</h4>
+		<h4 class="no-margin-bottom">对于我的世界{{ mcversion-range }}</h4>
 		<p class="no-margin-top">
 
 			{% if mcversion contains "w" or mcversion contains "r" or page.no-admaven contains mcversion or use-admaven == false %}
 				<a class="tile inline-block no-float bg-grayDark command-button primary no-border no-margin-left" href="{{ directlink }}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
 					<span class="icon mif-file-download"></span>
 					Wurst Client {{ full-version }}
-					<small>direct link</small>
+					<small>直接链接</small>
 				</a>
 			{% else %}
 				<a class="tile inline-block no-float bg-grayDark command-button primary no-border no-margin-left" href="{{ adlink }}" rel="nofollow noopener" target="_blank" style="width: auto;height: auto;">
 					<span class="icon mif-file-download"></span>
 					Wurst Client {{ full-version }}
-					<small>ad-supported link</small>
+					<small>广告支持的链接</small>
 				</a>
 				<span class="inline-block margin20 no-margin-right">
-					<a href="{{ directlink }}" rel="nofollow" target="_blank">(direct link)</a>
+					<a href="{{ directlink }}" rel="nofollow" target="_blank">(直接链接)</a>
 				</span>
 			{% endif %}
 
 			<span class="inline-block margin20 no-margin-right">
-				<a href="{{ srclink }}" rel="nofollow" target="_blank">(sources)</a>
+				<a href="{{ srclink }}" rel="nofollow" target="_blank">(来源)</a>
 			</span>
 			<span class="inline-block margin20 no-margin-right">
-				<a href="{{ devlink }}" rel="nofollow" target="_blank">(dev)</a>
+				<a href="{{ devlink }}" rel="nofollow" target="_blank">(开发)</a>
 			</span>
 			<span class="inline-block margin20 no-margin-right">
-				<a href="{{ srcdevlink }}" rel="nofollow" target="_blank">(sources-dev)</a>
+				<a href="{{ srcdevlink }}" rel="nofollow" target="_blank">(资源开发)</a>
 			</span>
 
 			{% if page.fabric-api %}
