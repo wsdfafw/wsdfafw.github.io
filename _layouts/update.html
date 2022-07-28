@@ -21,11 +21,11 @@ google_auto_ads: true
 			{% include update/log4shell-warnings.html %}
 			
 			{% if page.auto-list-mcversions %}
-				<p>This version of the Wurst Hacked Client is available for Minecraft {{ page.minecraft-versions | array_to_sentence_string }}.</p>
+				<p>此版本的Wurst Client可用于Minecraft {{ page.minecraft-versions | array_to_sentence_string }}.</p>
 			{% endif %}
 			
 			{% if page.log4shell-patched %}
-				<p>✔ This version is safe from the <a href="https://wiki.wurstclient.net/log4shell">Log4Shell</a> exploit.</p>
+				<p>✔ 此版本不受 <a href="https://wiki.wurstclient.net/log4shell">Log4Shell</a> 攻击.</p>
 			{% endif %}
 
 			{{ content }}
@@ -39,7 +39,7 @@ google_auto_ads: true
 	<div class="bg-grayLighter padding40 no-padding-left no-padding-right">
 		<div class="container post-content">
 
-			<h2 id="downloads">Downloads</h2>
+			<h2 id="downloads">下载</h2>
 			{% include update/downloads.html %}
 
 		</div>
@@ -49,14 +49,14 @@ google_auto_ads: true
 <div class="padding20 no-padding-left no-padding-right">
 	<div class="container post-content">
 
-		<h2>Related Tutorials</h2>
+		<h2>相关教程</h2>
 		<ul>
 			{% if page.fabric %}
-				<li><p><a href="/tutorials/wurst-7-optifine/">How To Install Wurst 7</a></p></li>
-				<li><p><a href="/tutorials/wurst-7-baritone/">How To Add Baritone To Wurst 7</a></p></li>
+				<li><p><a href="/tutorials/wurst-7-optifine/">如何安装Wurst 7</a></p></li>
+				<li><p><a href="/tutorials/wurst-7-baritone/">如何在Wurst 7中添加Baritone </a></p></li>
 			{% else %}
-				<li><p><a href="/tutorials/how-to-install/">How to install Wurst 6 for Minecraft 1.8 - 1.12</a></p></li>
-				<li><p><a href="/tutorials/how-to-update/">How to manually update Wurst 6 for Minecraft 1.8 - 1.12</a></p></li>
+				<li><p><a href="/tutorials/how-to-install/">如何为 Minecraft 1.8 - 1.12 安装 Wurst 6</a></p></li>
+				<li><p><a href="/tutorials/how-to-update/">如何为 Minecraft 1.8 - 1.12 手动更新 Wurst 6</a></p></li>
 			{% endif %}
 		</ul>
 
