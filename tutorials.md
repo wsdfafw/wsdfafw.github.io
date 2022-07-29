@@ -1,5 +1,5 @@
 ---
-title: Wurst Client Tutorials
+title: Wurst客户端教程
 description: How to use Wurst like a BOSS!
 permalink: /tutorials/
 google_auto_ads: true
@@ -70,13 +70,13 @@ google_auto_ads: true
 		<ul>
 			<li><p><a href="https://www.youtube.com/watch?v=rEA1CKR60z8">What to do if you can't open the GUI</a></p></li>
 			<li><p><a href="https://bugs.mojang.com/browse/MC-112780">How to fix crashes with <code>exit code -1073740791</code></a></p></li>
-			<li><p><a href="major-minor-52/">How to fix crashes with <code>Unsupported major.minor version 52.0</code></a></p></li>
+			<li><p><a href="major-minor-52/">如何使用<code>不支持的major.minor 52.0版修复崩溃</code></a></p></li>
 		</ul>
 	</div>
 </div>
 
 <div class="padding40 no-padding-left no-padding-right">
 	<div class="container">
-		<h2 class="align-center text-light">Need help with something else? <a href="/contact/">Contact me!</a></h2>
+		<h2 class="align-center text-light">需要其他帮助吗？ <a href="/contact/">联系我！</a></h2>
 	</div>
 </div>
