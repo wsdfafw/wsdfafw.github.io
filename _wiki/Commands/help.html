@@ -1,36 +1,114 @@
-====== .help ======
-
-<WRAP 516px>
-^  .help  ^^
-|{{ help.webp?500 |The output of typing .help in Wurst 7.20.}}||
-^Type|[[:Command]]|
-^Category|[[:No Category|none]]|
-^In-game description|"Shows help for a command or a list of commands.\\ \\ Syntax: .help <command>\\ List commands: .help [<page>]"|
-^[[:keybinds#default_keybinds|Default keybind]]|none|
-^Source code|[[w7src>net/wurstclient/commands/HelpCmd.java]]|
-</WRAP>
-
-.help is a [[:command|chat command]] that can either show a list of all available commands or show the help text and syntax for a specific command.
-
-===== Syntax =====
-
-Main article: [[Command Syntax]]
-
-  * ''.help <command>'' shows help text and syntax for a given command.\\ \\ 
-  * ''List commands: .help [<page>]'' lists all available commands, split into pages with 8 commands each.\\ \\ 
-
-Examples:
-  * ''.help'' shows the first page of the command list.\\ \\ 
-  * ''.help 2'' shows the second page of the command list.\\ \\ 
-  * ''.help taco'' shows the syntax of [[.taco]].\\ \\ 
-  * ''.help .taco'' also shows the syntax of [[.taco]].\\ \\ 
-
-===== Tips =====
-  * If you ever forget the syntax for ''.help'', just type ''.help help''.
-
-===== Changes =====
-
-^Version^Changes^
-|[[update:Wurst 1.3 Beta]]|Added chat commands: "[[.help]]", "[[.nuker]]", "[[.rv]]", "[[.say]]" and "[[.t]]".|
-
-{{tag>client-side}}
+<div class="page group content_initial">
+ 
+  <div class="plugin_fastwiki_marker" style="display:none"></div>
+  <div id="dw__toc" class="dw__toc">
+  <h3 class="toggle open" style="cursor: pointer;"><strong><span>−</span></strong>Table of Contents</h3>
+  <div style="" aria-expanded="true">
+  <ul class="toc">
+  <li class="level1"><div class="li"><a href="#help">.help</a></div>
+  <ul class="toc">
+  <li class="level2"><div class="li"><a href="#syntax">Syntax</a></div></li>
+  <li class="level2"><div class="li"><a href="#tips">Tips</a></div></li>
+  <li class="level2"><div class="li"><a href="#changes">Changes</a></div></li>
+  </ul></li>
+  </ul>
+  </div>
+  </div>
+  
+  <h1 class="sectionedit1" id="help">.help</h1>
+  <div class="level1">
+  <div class="plugin_wrap" style="width: 516px; max-width: 100%;"><div class="table sectionedit4"><table class="inline">
+  <thead>
+  <tr class="row0">
+  <th class="col0 centeralign" colspan="2"> .help </th>
+  </tr>
+  </thead>
+  <tbody><tr class="row1">
+  <td class="col0" colspan="2"><a href="/_detail/cmd/help.webp?id=cmd%3Ahelp" class="media link-instanted" title="cmd:help.webp"><img src="/_media/cmd/help.webp?w=500&amp;tok=3f3771" class="mediacenter" loading="lazy" title="The output of typing .help in Wurst 7.20." alt="The output of typing .help in Wurst 7.20." width="500"></a></td>
+  </tr>
+  <tr class="row2">
+  <th class="col0">Type</th><td class="col1"><a href="/command" class="wikilink1" title="command" data-wiki-id="command">Command</a></td>
+  </tr>
+  <tr class="row3">
+  <th class="col0">Category</th><td class="col1"><a href="/no_category" class="wikilink1" title="no_category" data-wiki-id="no_category">none</a></td>
+  </tr>
+  <tr class="row4">
+  <th class="col0">In-game description</th><td class="col1">“Shows help for a command or a list of commands.<br>
+  <br>
+  Syntax: .help &lt;command&gt;<br>
+  List commands: .help [&lt;page&gt;]“</td>
+  </tr>
+  <tr class="row5">
+  <th class="col0"><a href="/keybinds#default_keybinds" class="wikilink1" title="keybinds" data-wiki-id="keybinds">Default keybind</a></th><td class="col1">none</td>
+  </tr>
+  <tr class="row6">
+  <th class="col0">Source code</th><td class="col1"><a href="https://github.com/Wurst-Imperium/Wurst7/blob/master/src/main/java/net/wurstclient/commands/HelpCmd.java" class="interwiki iw_w7src" target="_blank" title="https://github.com/Wurst-Imperium/Wurst7/blob/master/src/main/java/net/wurstclient/commands/HelpCmd.java" rel="noopener">net/wurstclient/commands/HelpCmd.java</a></td>
+  </tr>
+  </tbody></table></div>
+  </div>
+  <p>
+  .help is a <a href="/command" class="wikilink1" title="command" data-wiki-id="command">chat command</a> that can either show a list of all available commands or show the help text and syntax for a specific command.
+  </p>
+  </div>
+  <h2 class="sectionedit5" id="syntax">Syntax</h2>
+  <div class="level2">
+  <p>
+  Main article: <a href="/cmd/command_syntax" class="wikilink1" title="cmd:command_syntax" data-wiki-id="cmd:command_syntax">Command Syntax</a>
+  </p>
+  <ul>
+  <li class="level1"><div class="li"> <code>.help &lt;command&gt;</code> shows help text and syntax for a given command.<br>
+  <br>
+  </div>
+  </li>
+  <li class="level1"><div class="li"> <code>List commands: .help [&lt;page&gt;]</code> lists all available commands, split into pages with 8 commands each.<br>
+  <br>
+  </div>
+  </li>
+  </ul>
+  <p>
+  Examples:
+  </p>
+  <ul>
+  <li class="level1"><div class="li"> <code>.help</code> shows the first page of the command list.<br>
+  <br>
+  </div>
+  </li>
+  <li class="level1"><div class="li"> <code>.help 2</code> shows the second page of the command list.<br>
+  <br>
+  </div>
+  </li>
+  <li class="level1"><div class="li"> <code>.help taco</code> shows the syntax of <a href="/cmd/taco" class="wikilink1" title="cmd:taco" data-wiki-id="cmd:taco">.taco</a>.<br>
+  <br>
+  </div>
+  </li>
+  <li class="level1"><div class="li"> <code>.help .taco</code> also shows the syntax of <a href="/cmd/taco" class="wikilink1" title="cmd:taco" data-wiki-id="cmd:taco">.taco</a>.<br>
+  <br>
+  </div>
+  </li>
+  </ul>
+  </div>
+  <h2 class="sectionedit6" id="tips">Tips</h2>
+  <div class="level2">
+  <ul>
+  <li class="level1"><div class="li"> If you ever forget the syntax for <code>.help</code>, just type <code>.help help</code>.</div>
+  </li>
+  </ul>
+  </div>
+  <h2 class="sectionedit7" id="changes">Changes</h2>
+  <div class="level2">
+  <div class="table sectionedit8"><table class="inline">
+  <thead>
+  <tr class="row0">
+  <th class="col0">Version</th><th class="col1">Changes</th>
+  </tr>
+  </thead>
+  <tbody><tr class="row1">
+  <td class="col0"><a href="/update/wurst_1.3_beta" class="wikilink1" title="update:wurst_1.3_beta" data-wiki-id="update:wurst_1.3_beta">Wurst 1.3 Beta</a></td><td class="col1">Added chat commands: ”<span class="curid"><a href="/cmd/help" class="wikilink1" title="cmd:help" data-wiki-id="cmd:help">.help</a></span>”, “<a href="/cmd/nuker" class="wikilink2" title="cmd:nuker" rel="nofollow" data-wiki-id="cmd:nuker">.nuker</a>”, “<a href="/cmd/rv" class="wikilink2" title="cmd:rv" rel="nofollow" data-wiki-id="cmd:rv">.rv</a>”, “<a href="/cmd/say" class="wikilink2" title="cmd:say" rel="nofollow" data-wiki-id="cmd:say">.say</a>” and “<a href="/cmd/t" class="wikilink2" title="cmd:t" rel="nofollow" data-wiki-id="cmd:t">.t</a>”.</td>
+  </tr>
+  </tbody></table></div>
+  <div class="tags"><span>
+  <a href="/tag/client-side?do=showtag&amp;tag=client-side" class="wikilink1" title="tag:client-side" rel="tag">client-side</a>
+  </span></div>
+  </div>
+  
+  </div>
