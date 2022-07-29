@@ -102,7 +102,7 @@ commands:
   .enabledhax: https://wiki.wurstclient.net/cmd/enabledhax
   .friends: https://wiki.wurstclient.net/cmd/friends
   .gm: https://wiki.wurstclient.net/cmd/gm
-  .help: /wiki/Commands/help
+  .help: https://wiki.wurstclient.net/cmd/help
   .itemlist: https://wiki.wurstclient.net/cmd/itemlist
   .modify: https://wiki.wurstclient.net/cmd/modify
   .potion: https://wiki.wurstclient.net/cmd/potion
