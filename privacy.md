@@ -36,8 +36,8 @@ google_auto_ads: false
 
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
   <div class="container">
-		<h2 class="text-normal">Plausible Analytics</h2>
-    <p>I am currently experimenting with using <a href="https://plausible.io/" target="_blank">Plausible</a> as a more privacy-friendly alternative to Google Analytics. Plausible is only on this website, not in the Wurst Client itself.</p>
+		<h2 class="text-normal">可信的分析</h2>
+    <p>我目前正在尝试使用 <a href="https://plausible.io/" target="_blank">似是而非</a> 作为谷歌分析的一个更加隐私友好的替代方案。似是而非只是在这个网站上，而不是在香肠客户端本身。</p>
 	</div>
 </div>
 
