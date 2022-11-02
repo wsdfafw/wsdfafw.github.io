@@ -1,5 +1,5 @@
 ---
-title: Privacy Policy
+title: 隐私策略
 permalink: /privacy/
 google_auto_ads: false
 ---
@@ -8,23 +8,23 @@ google_auto_ads: false
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
 	<div class="container">
 		<h2><abbr title="Too long; Didn't read. (basically a short summary of this page)">TL;DR:</abbr></h2>
-		<h3 class="text-normal">What I DON'T do:</h3>
+		<h3 class="text-normal">我不做的事:</h3>
 		<ul>
-      <li><p>Collect your Minecraft usernames and/or passwords</p></li>
-      <li><p>Distribute malware (or "potentially unwanted programs") with Wurst</p></li>
-      <li><p>Sell your data</p></li>
+      <li><p>收集您的《我的世界》用户名和/或密码</p></li>
+      <li><p>用香肠分发恶意软件(或“潜在有害程序”)</p></li>
+      <li><p>出售您的数据</p></li>
 		</ul>
-		<h3 class="text-normal">What I DO:</h3>
+		<h3 class="text-normal">我做什么:</h3>
 		<ul>
-      <li><p>Use Google Analytics to see how many people are using Wurst</p></li>
-      <li><p>Sell ads on this website</p></li>
+      <li><p>使用谷歌分析来看看有多少人在使用香肠</p></li>
+      <li><p>在此网站上销售广告</p></li>
 		</ul>
 	</div>
 </div>
 
 <div class="padding20 no-padding-left no-padding-right">
   <div class="container">
-		<h2 class="text-normal">Google Analytics</h2>
+		<h2 class="text-normal">谷歌分析</h2>
     <p>I use Google Analytics to see how many people are using Wurst and which versions are the most popular. I use this data to decide when to stop supporting old Minecraft versions. <b>There is no Google Analytics on this website, it's only in the Wurst Client itself.</b></p>
     <p>When you launch Wurst, it only sends a single message to the Google Analytics server saying which Wurst version and Minecraft version was just launched. It doesn't track what you do with Wurst or how long you use it for.</p>
     <p>Google Analytics uses a random ID to tell the difference between one computer launching Wurst twice and two computers each launching Wurst once. Wurst generates this ID on its own and changes it every 3 days. This ensures that Google can't do anything sneaky and try use this data for ads.</p>
