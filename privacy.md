@@ -69,7 +69,7 @@ google_auto_ads: false
 
 <div class="padding20 no-padding-left no-padding-right">
   <div class="container">
-		<h2 class="text-normal">Other Stuff</h2>
+		<h2 class="text-normal">其他东西</h2>
     <p>Since I don't have your email address, I can't send you one of those annoying "we have updated our privacy policy" e-mails. Instead, I have a GitHub repository where you can see how this page has changed over time: <a href="https://github.com/Wurst-Imperium/WurstClient.net/commits/gh-pages/privacy.md" target="_blank">https://github.com/Wurst-Imperium/WurstClient.net/commits/gh-pages/privacy.md</a></p>
 	</div>
 </div>
