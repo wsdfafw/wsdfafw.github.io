@@ -36,6 +36,13 @@ google_auto_ads: false
 
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
   <div class="container">
+		<h2 class="text-normal">Plausible Analytics</h2>
+    <p>I am currently experimenting with using <a href="https://plausible.io/" target="_blank">Plausible</a> as a more privacy-friendly alternative to Google Analytics. Plausible is only on this website, not in the Wurst Client itself.</p>
+	</div>
+</div>
+
+<div class="padding20 no-padding-left no-padding-right">
+  <div class="container">
 		<h2 class="text-normal">Google AdSense</h2>
     <p>I use Google AdSense to sell ads on this website. <strong>I don't sell data and <a href="https://safety.google/privacy/ads-and-data/" target="_blank">neither does Google</a>!</strong></p>
     <p>Google has their own privacy policy which you can view here: <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></p>
@@ -48,13 +55,6 @@ google_auto_ads: false
       <li>"First-party cookies" (bypasses privacy tools that block third-party cookies)</li>
     </ul>
     <p>Google AdSense uses <a href="https://support.google.com/adsense/answer/7549925?hl=en" target="_blank">third-party cookies</a> to keep track of things like how often each ad is seen and how often each ad is clicked on. I have turned off Google's personalization and first-party cookies, as stated above.</p>
-	</div>
-</div>
-
-<div class="padding20 no-padding-left no-padding-right">
-  <div class="container">
-		<h2 class="text-normal">PurifyDigital</h2>
-    <p>I also partner with PurifyDigital to sell ads on this website. They have confirmed in writing that all of their ads are compliant with the GDPR and other data protection laws.</p>
 	</div>
 </div>
 
