@@ -1,17 +1,29 @@
 <div class="padding10 no-padding-left no-padding-right">
 
-    <h3>Wurst as a Torrent</h3>
-    
-    <p>This torrent contains all above versions bundled together{% if page.fabric %} (without the Fabric API){% endif %}. Open it in your torrent client to select which version(s) you want to download.</p>
-    
-    <p><b>警告:</b> Torrenting 会向公众公开您的 IP 地址。 服务器所有者*could*监视此种子并自动禁止已从中下载文件的 IP 地址。 考虑通过 VPN 或某种代理下载种子。 （此问题仅影响 torrent。上面列出的“正常”下载无需 VPN 即可安全下载。）</p>
-    
-    <a class="tile inline-block no-float bg-grayDark command-button primary no-border" href="{{ page.torrent }}" rel="nofollow" target="_blank" style="width: auto;height: auto;">
-        <span class="icon mif-folder-download"></span>
-        Wurst Client v{{ page.wurst-version }}
-        <small>对于上面列出的所有 Minecraft 版本</small>
-    </a>
-    
-    <p>如果您想通过播种这些种子来提供帮助，可以使用完整列表 <a href="/seedme.txt">here</a>.</p>
+	<h3>Wurst as a Torrent</h3>
+
+	<p>
+		This torrent contains all above versions bundled together
+		{%- if page.fabric %} (without the Fabric API){% endif %}.
+		Open it in your torrent client to select which version(s) you want to download.
+	</p>
+
+	<p>
+		<b>WARNING:</b>
+		Torrenting reveals your IP address to the public. Server owners *could* monitor this torrent and automatically
+		ban IP addresses that have downloaded files from it. Consider torrenting over a VPN or some kind of proxy.
+		(This problem only affects torrents. The "normal" downloads listed above are safe to download without a VPN.)
+	</p>
+
+	<a href="{{ page.torrent }}" rel="nofollow" target="_blank"
+		data-analytics='"Torrent Wurst", {"props": {"version": "{{ page.wurst-version }}"}}'
+		class="tile inline-block no-float bg-grayDark command-button primary no-border"
+		style="width: auto;height: auto;">
+		<span class="icon mif-folder-download"></span>
+		Wurst Client v{{ page.wurst-version }}
+		<small>for all Minecraft versions listed above</small>
+	</a>
+
+	<p>If you would like to help by seeding these torrents, a full list is available <a href="/seedme.txt">here</a>.</p>
 
 </div>
