@@ -1,7 +1,7 @@
-1. Install <a href="https://files.wurstimperium.net/fabric-installer/" target="_blank" rel="nofollow noopener">Fabric (Loader)</a>.
+1. 安装 <a href="https://files.wurstimperium.net/fabric-installer/" target="_blank" rel="nofollow noopener">Fabric (Loader)</a>.
 
-2. Add Fabric (API) to your mods folder.
+2. 将Fabric (API)添加到mods文件夹中。
 
-3. Add Wurst to your mods folder.
+3. 将香肠添加到mods文件夹中。
 
-If you need more details or run into problems, check [this tutorial](/tutorials/how-to-install/wurst-7/).
+如果您需要更多的细节或遇到问题，请查看[本教程](/tutorials/how-to-install/wurst-7/)。
