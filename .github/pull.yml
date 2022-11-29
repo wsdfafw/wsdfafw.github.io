@@ -1,0 +1,9 @@
+version: "1"
+rules:
+  - base: gh-pages
+    upstream: Wurst-Imperium:gh-pages
+    mergeMethod: merge
+    assignees:
+      - buiawpkgew1
+    conflictReviewers:
+      - buiawpkgew1
