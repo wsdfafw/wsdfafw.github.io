@@ -1,4 +1,4 @@
-1. 安装 <a href="https://files.wurstimperium.net/fabric-installer/" target="_blank" rel="nofollow noopener">Fabric (Loader)</a>.
+1. 安装 <a href="https://fabricmc.net/use/installer/" target="_blank" rel="nofollow noopener">Fabric (Loader)</a>.
 
 2. 将Fabric (API)添加到mods文件夹中。
 
