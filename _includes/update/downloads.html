@@ -1,32 +1,83 @@
-{% for update in site.updates reversed %}
-	{% assign latest = update.wurst-version %}
-	{% break %}
-{% endfor %}
+<style>
+	ul.spaced-list li {
+		margin-block: 1em;
+	}
+	a.command-button {
+		color: #262626;
+	}
+</style>
 
-{% assign mcxbase = "https://github.com/Wurst-Imperium/Wurst-MCX2/releases/download/" %}
+{%- for update in site.updates reversed -%}
+	{%- assign latest = update.wurst-version -%}
+	{%- break -%}
+{%- endfor -%}
 
-{% if page.old-downloads or page.old-mcx %}
+{%- assign mcxbase = "https://github.com/Wurst-Imperium/Wurst-MCX2/releases/download/" -%}
 
-	{% include update/dmca-removed.html %}
+{%- if page.old-downloads or page.old-mcx -%}
 
-{% elsif page.fabric %}
+	{%- include update/dmca-removed.html -%}
 
-	{% include update/fabric-downloads.html %}
+{%- elsif page.fabric -%}
+	<div class="padding10 no-padding-left no-padding-right" style="display: grid;grid-template-columns: 1fr;">
 
-{% else %}
+		{%- for mcversion in page.minecraft-versions -%}
+		<div data-mcversion="{{ mcversion }}" class="padding10 no-padding-left no-padding-right">
+			{%- capture mcversion-range -%}{%- unless site.mcversions[mcversion] -%}{{ mcversion }}{%- else -%}{{ site.mcversions[mcversion] }}{%- endunless -%}{%- endcapture -%}
+			<h3>for Minecraft {{ mcversion-range }} + Fabric</h3>
+			{%- include update/fabric-download.html -%}
+		</div>
+		{%- endfor -%}
 
-	{% if page.mc-1-7-remake %}
-		{% include update/dmca-remade.html %}
-	{% endif %}
+		{%- if page.snapshots -%}
+		<div data-mcversion="snapshot" class="padding10 no-padding-left no-padding-right">
+			<h3>for Minecraft Snapshots</h3>
+			<div style="display: grid;grid-template-columns: 1fr;">
+				{%- for mcversion in page.snapshots -%}
+				<details data-snapshot="{{ mcversion }}">
+					<summary>{{ mcversion }} (click to expand)</summary>
+					{%- include update/fabric-download.html -%}
+				</details>
+				{%- endfor -%}
+			</div>
+		</div>
+		{%- endif -%}
 
-	{% unless page.no-zip %}
-		{% include update/wurst6-downloads.html mode = "zip" %}
-	{% endunless %}
+	</div>
+{%- else -%}
 
-	{% include update/wurst6-downloads.html mode = "jar" %}
+	{%- if page.mc-1-7-remake -%}
+		{%- include update/dmca-remade.html -%}
+	{%- endif -%}
 
-{% endif %}
+	{%- unless page.no-zip -%}
+		{%- include update/wurst6-downloads.html mode = "zip" -%}
+	{%- endunless -%}
 
-{% if page.torrent %}
-	{% include update/torrent.html %}
-{% endif %}
+	{%- include update/wurst6-downloads.html mode = "jar" -%}
+
+{%- endif -%}
+
+{%- if page.torrent -%}
+	{%- include update/torrent.html -%}
+{%- endif -%}
+
+<script>
+	let urlParams = new URLSearchParams(window.location.search);
+	let mc = urlParams.get("mc");
+	let snapshot = urlParams.get("snapshot");
+
+	if (snapshot) {
+		mc = "snapshot";
+		let details = document.querySelectorAll(`details[data-snapshot="${snapshot}"]`);
+		details.forEach(details => {
+			details.style.gridRow = "1";
+			details.open = true;
+		});
+	}
+
+	if (mc) {
+		let elements = document.querySelectorAll(`[data-mcversion="${mc}"]`);
+		elements.forEach(element => element.style.gridRow = "1");
+	}
+</script>
