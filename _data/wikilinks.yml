@@ -58,6 +58,7 @@ hacks:
   HealthTags: https://wurst.wiki/healthtags
   HighJump: https://wurst.wiki/highjump
   /home: https://wurst.wiki/home
+  InfiniChat: https://wurst.wiki/infinichat
   ItemESP: https://wurst.wiki/itemesp
   Jesus: https://wurst.wiki/jesus
   Jetpack: https://wurst.wiki/jetpack
@@ -105,6 +106,7 @@ commands:
   .clear: https://wurst.wiki/cmd/clear
   .dupe: https://wurst.wiki/cmd/dupe
   .enabledhax: https://wurst.wiki/cmd/enabledhax
+  .enchant: https://wurst.wiki/cmd/enchant
   .friends: https://wurst.wiki/cmd/friends
   .gm: https://wurst.wiki/cmd/gm
   .help: https://wurst.wiki/cmd/help
