@@ -31,11 +31,11 @@
 
 		{%- if page.snapshots -%}
 		<div data-mcversion="snapshot" class="padding10 no-padding-left no-padding-right">
-			<h3>for Minecraft Snapshots</h3>
+			<h3>对于《我的世界》快照</h3>
 			<div style="display: grid;grid-template-columns: 1fr;">
 				{%- for mcversion in page.snapshots -%}
 				<details data-snapshot="{{ mcversion }}">
-					<summary>{{ mcversion }} (click to expand)</summary>
+					<summary>{{ mcversion }} (单击以展开)</summary>
 					{%- include update/fabric-download.html -%}
 				</details>
 				{%- endfor -%}
