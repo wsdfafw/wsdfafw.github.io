@@ -5,6 +5,7 @@ cheats:
   - AntiAFK
   - AntiBlind
   - AntiCactus
+  - AntiEntityPush
   - AntiHunger
   - AntiFire
   - AntiKnockback
@@ -15,6 +16,7 @@ cheats:
   - ArrowDMG
   - AutoArmor
   - AutoBuild
+  - AutoComplete
   - AutoDrop
   - AutoEat
   - AutoFarm
