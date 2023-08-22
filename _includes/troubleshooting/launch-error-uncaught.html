@@ -1,44 +1,44 @@
 <details>
-	<summary id="launch-error-uncaught">I see an error message saying <code>Uncaught exception in thread "main"</code>.</summary>
+	<summary id="launch-error-uncaught">Ich sehe eine Fehlermeldung mit <code>Uncaught exception in thread "main"</code>.</summary>
 	<p>
-		Look closely at the error message and select which of the following errors it contains:
+		Schau dir die Fehlermeldung genau an und wähle aus, welcher der folgenden Fehler sie enthält:
 	</p>
 	<div style="padding-left: 0.625rem;border-left: 1px #ccc solid;">
 		<details>
 			<summary id="launch-error-sources"><code>MixinApplyError: Mixin ... from mod [wurst] FAILED during PREPARE</code></summary>
 			<p>
-				<img src="https://images.wurstclient.net/_media/how-to-install/error_wurst_sources.webp" alt="the error you get when you put raw source code into your mods folder">
+				<img src="https://images.wurstclient.net/_media/how-to-install/error_wurst_sources.webp" alt="Der Fehler, den man erhält, wenn man die Quellcode-Datei in den Mod-Ordner legt">
 			</p>
 			<p>
-				This error happens when you have placed the "-sources.jar" file in your mods folder instead of using the normal, compiled version of Wurst.
+				Dieser Fehler tritt auf, wenn du die "-sources.jar" Datei in deinem Mods-Ordner platzierst, anstatt die normale, kompilierte Version von Wurst zu verwenden.
 			</p>
 			<p>
-				<img src="https://images.wurstclient.net/_media/how-to-install/error_wurst_sources_folder.webp" alt=".minecraft/mods folder with the source code of Wurst, which will not work">
+				<img src="https://images.wurstclient.net/_media/how-to-install/error_wurst_sources_folder.webp" alt=".minecraft/mods Ordner mit dem unkompilierten Quellcode von Wurst, der so nicht funktionieren kann">
 			</p>
 			<p>
-				You should <a href="#wurst">go back to step 3</a> and install the normal, compiled version of Wurst without any "sources" or "dev" at the end.
+				Du solltest <a href="#wurst">zurück zu Schritt 3 gehen</a> und die normale, kompilierte Version von Wurst ohne "sources" oder "dev" am Ende installieren.
 			</p>
 		</details>
 		<details>
 			<summary id="launch-error-major63"><code>Unsupported class file major version 63</code></summary>
 			<p>
-				<img src="https://images.wurstclient.net/_media/how-to-install/error_major_version_63.webp" alt="the major version 63 error">
+				<img src="https://images.wurstclient.net/_media/how-to-install/error_major_version_63.webp" alt="Der major version 63 Fehler">
 			</p>
 			<p>
-				This error happens when you use a Fabric Loader version older than 0.14 with a Minecraft 1.19 snapshot.
+				Dieser Fehler tritt auf, wenn du eine Fabric Loader-Version älter als 0.14 mit einem Minecraft 1.19 Snapshot verwendest.
 			</p>
 			<p>
-				Minecraft 1.19 snapshots require Fabric Loader 0.14.0 or newer, but for some reason the Fabric installer selects 0.13.3 by default.
+				Minecraft 1.19 Snapshots erfordern Fabric Loader 0.14.0 oder neuer, aber aus irgendeinem Grund wählt der Fabric-Installer standardmäßig 0.13.3 aus.
 			</p>
 			<p>
-				<img src="https://images.wurstclient.net/_media/how-to-install/fabric_loader_014.webp" alt="manually selecting loader 0.14.x in the Fabric installer">
+				<img src="https://images.wurstclient.net/_media/how-to-install/fabric_loader_014.webp" alt="Manuelles Auswählen von Loader 0.14.x im Fabric-Installer">
 			</p>
 			<p>
-				You should <a href="#fabric-loader">run the Fabric installer again</a> and this time manually select the latest Fabric Loader version.
+				Du solltest <a href="#fabric-loader">den Fabric-Installer erneut ausführen</a> und diesmal die neueste Fabric Loader-Version manuell auswählen.
 			</p>
 			<p>
-				After doing this, you will have multiple <code>fabric-loader-...</code> installations in your Minecraft Launcher.
-				Make sure to select the correct one so you don't get the same error again.
+				Nachdem du das getan hast, wirst du mehrere <code>fabric-loader-...</code> Installationen in deinem Minecraft-Launcher haben.
+				Achte darauf, die richtige Installation auszuwählen, damit du nicht denselben Fehler noch einmal bekommst.
 			</p>
 		</details>
 	</div>
