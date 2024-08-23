@@ -35,7 +35,7 @@ details {
 <section class="padding20 no-padding-left no-padding-right" id="purchase">
 	<div class="container">
 		<p class="text-accent padding10 no-padding-left no-padding-right no-padding-top">
-			Say goodbye to pesky ads and hello to a clean, uninterrupted download experience! No subscriptions, no monthly fees, just a one-and-done purchase for a lifetime of ad-free Wurst downloads.
+			告别烦人的广告，迎接无干扰的干净下载体验！无需订阅，无需每月费用，只需一次性购买即可享受终身无广告Wurst下载。
 		</p>
 		<div class="wurst-grid cells2">
 			<div class="bg-grayLighter padding20 set-border">
@@ -44,38 +44,38 @@ details {
 						€<b>9.99</b>
 					</span>
 					<span style="margin-left: 0.5rem;">
-						<span style="font-weight: 500;">one-time payment</span>
+						<span style="font-weight: 500;">一次性付款</span>
 						<br>
 						<span class="fg-gray">
-							<span id="currency-code" class="loading">EUR</span>, incl. VAT
+							<span id="currency-code" class="loading">EUR</span>, 含增值税
 						</span>
 					</span>
 				</p>
-				<button id="buy-button" class="button primary full-size shadow bg-hover-lightBlue">Get Ad-Free Access</button>
+				<button id="buy-button" class="button primary full-size shadow bg-hover-lightBlue">获取无广告访问</button>
 				<div class="align-center">
 					<div class="align-left inline-block">
 						<ul class="unstyled-list">
-							<li>&check; No banner ads</li>
-							<li>&check; No pop-ups</li>
-							<li>&check; No sponsored links</li>
+							<li>&check; 无横幅广告</li>
+							<li>&check; 无弹出窗口</li>
+							<li>&check; 无赞助链接</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div>
-				<h2 class="text-light">Already purchased?</h2>
-				<p>If you've purchased ad-free access on another device or somehow got logged out, you can easily restore it.</p>
+				<h2 class="text-light">已经购买了吗？</h2>
+				<p>如果你在其他设备上购买了无广告访问，或者以某种方式被注销，你可以轻松恢复它。</p>
 				<form id="restore-access-form" style="display: flex;align-items: center;">
-					<input type="email" name="email" autocomplete="email" placeholder="Your email address" style="height: 2.125rem;padding: 0.3125rem;border: 1px #d9d9d9 solid;margin-inline-end: -1px;flex-grow: 1">
-					<button class="button">Send Link</button>
+					<input type="email" name="email" autocomplete="email" placeholder="你的电子邮件地址" style="height: 2.125rem;padding: 0.3125rem;border: 1px #d9d9d9 solid;margin-inline-end: -1px;flex-grow: 1">
+					<button class="button">发送链接</button>
 				</form>
-				<p>Simply enter your email address above and click on the link we send you.</p>
+				<p>只需在上方输入你的电子邮件地址，然后点击我们发送给你的链接。</p>
 			</div>
 		</div>
 		<div class="padding20 no-padding-left no-padding-right"></div>
 		<div class="padding10 no-padding-left no-padding-right align-center">
-			<h2>See For Yourself</h2>
-			<p>Click on any screenshot to view it in full size.</p>
+			<h2>亲自看看</h2>
+			<p>点击任何截图以全尺寸查看。</p>
 		</div>
 		<div class="padding10 no-padding-left no-padding-right">
 			<div class="wurst-grid">
@@ -83,7 +83,7 @@ details {
 				{%- assign fullsize-image = screenshot | replace: '_540p.webp', '.jpg' -%}
 				{%- assign filename = fullsize-image | replace: 'https://images.wurstclient.net/_media/afa/', '' -%}
 				<article>
-					<a href="{{ fullsize-image }}" target="_blank" title="File: {{ filename }}" data-analytics="Screenshot Gallery: Expand Image" data-analytics-image="{{ filename }}">
+					<a href="{{ fullsize-image }}" target="_blank" title="文件: {{ filename }}" data-analytics="截图库: 展开图像" data-analytics-image="{{ filename }}">
 						<img src="{{ screenshot }}" loading="lazy" alt="{{ filename }}" width="640" height="360">
 					</a>
 				</article>
@@ -94,7 +94,7 @@ details {
 		<div class="wurst-grid cells2 centered">
 			<figure>
 				<blockquote class="text-accent">
-					<p>The Wurst Hacked Client puts you in the driver's seat!</p>
+					<p>Wurst Hacked Client让你成为驾驶者！</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>WiZARD HAX</cite></p>
@@ -102,7 +102,7 @@ details {
 			</figure>
 			<figure>
 				<blockquote class="text-accent">
-					<p>The Wurst Client is one of, if not the best Minecraft hack.</p>
+					<p>Wurst Client是，如果不是最好的Minecraft黑客之一。</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>mchacks.net</cite></p>
@@ -110,7 +110,7 @@ details {
 			</figure>
 			<figure>
 				<blockquote class="text-accent">
-					<p>For those who relish in survival mode, this client is a godsend!</p>
+					<p>对于那些喜欢生存模式的人来说，这个客户端是救星！</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>thebluecrusader</cite></p>
@@ -124,10 +124,10 @@ details {
 <section class="padding20 no-padding-left no-padding-right" id="already-purchased" style="display: none">
 	<div class="container align-center">
 		<p class="text-accent">
-			Thank you for your purchase! Your Ad-Free Access Pass has been enabled.
+			感谢你的购买！你的无广告访问通行证已启用。
 		</p>
 		<p>
-			Any problems? <a href="mailto:hello@wurstclient.net">Let me know</a>!
+			有任何问题？<a href="mailto:hello@wurstclient.net">告诉我</a>！
 		</p>
 		<div class="padding100 no-padding-left no-padding-right"></div>
 	</div>
