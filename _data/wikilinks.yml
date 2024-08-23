@@ -57,7 +57,6 @@ hacks:
   FeedAura: https://wurst.wiki/feedaura
   FightBot: https://wurst.wiki/fightbot
   Flight: https://wurst.wiki/flight
-  ForceOP: https://wurst.wiki/forceop
   Freecam: https://wurst.wiki/freecam
   Fullbright: https://wurst.wiki/fullbright
   Glide: https://wurst.wiki/glide
@@ -97,6 +96,7 @@ hacks:
   SnowShoe: https://wurst.wiki/snowshoe
   SpeedNuker: https://wurst.wiki/speednuker
   Spider: https://wurst.wiki/spider
+  TemplateTool: https://wurst.wiki/templatetool
   Tillaura: https://wurst.wiki/tillaura
   TP-Aura: https://wurst.wiki/tp-aura
   Trajectories: https://wurst.wiki/trajectories
@@ -119,6 +119,7 @@ commands:
   .enabledhax: https://wurst.wiki/cmd/enabledhax
   .enchant: https://wurst.wiki/cmd/enchant
   .friends: https://wurst.wiki/cmd/friends
+  .give: https://wurst.wiki/cmd/give
   .gm: https://wurst.wiki/cmd/gm
   .help: https://wurst.wiki/cmd/help
   .itemlist: https://wurst.wiki/cmd/itemlist
@@ -129,7 +130,6 @@ commands:
   .setblock: https://wurst.wiki/cmd/setblock
   .setcolor: https://wurst.wiki/cmd/setcolor
   .setmode: https://wurst.wiki/cmd/setmode
-  .spammer: https://wurst.wiki/cmd/spammer
   .taco: https://wurst.wiki/cmd/taco
   .unbind: https://wurst.wiki/cmd/unbind
   .xray: https://wurst.wiki/cmd/xray

@@ -11,6 +11,8 @@ capes:
   halloween5: "https://user-images.githubusercontent.com/10100202/66271217-c10c7d80-e85b-11e9-8fdb-a7a2ec6ed8b8.png"
   halloween6: "https://user-images.githubusercontent.com/10100202/66271218-c10c7d80-e85b-11e9-89d6-427a5f068df2.png"
   halloween7: "https://user-images.githubusercontent.com/10100202/66271219-c10c7d80-e85b-11e9-94d4-f6b9d3ed96f9.png"
+  jj: "https://github.com/Wurst-Imperium/WurstClient.net/assets/10100202/4f412ff2-ab2b-48be-ab97-36e709e2e6b8"
+  flashbxng: "https://github.com/user-attachments/assets/6a42de06-a559-4df4-98b1-abec0f277f12"
 ---
 {
   "Alexander01998": "{{ page.capes.wurst }}",
@@ -44,7 +46,7 @@ capes:
   "edb57596-64b0-4f02-96e3-412c5a14976b": "{{ page.capes.wizhax2015 }}",
   "BoBoChicken666": "{{ page.capes.wizhax2015 }}",
   "47f3650f-b74c-44d3-8ce3-ddc3a5c1d2f3": "{{ page.capes.wizhax2015 }}",
-  
+
   "Coolgamer1210": "{{ page.capes.halloween1 }}",
   "c94acb15-2259-4fbe-81fe-4c39e8eacb80": "{{ page.capes.halloween1 }}",
   "That1Weeb": "{{ page.capes.halloween2 }}",
@@ -64,10 +66,24 @@ capes:
   "1fed2286-f703-4ec4-83ce-7b6a6b26e477": "{{ page.capes.wurst }}",
   "tRyexulOv": "{{ page.capes.wurst }}",
   "5dd101af-109d-4d72-b5d6-acc8ebfc4ce6": "{{ page.capes.wurst }}",
-  "CheifQueefOG": "{{ page.capes.wurst }}",
+  "UnderbellyGrease": "{{ page.capes.wurst }}",
   "03ee256e-d601-41a0-9d19-ebaaffda5d36": "{{ page.capes.wurst }}",
-  "gmodsans": "{{ page.capes.wurst }}",
-  "9df71575-b9a1-4c24-a9a2-8544d158d999": "{{ page.capes.wurst }}",
+  "Koyos_": "{{ page.capes.wurst }}",
+  "7b8ffbcf-03d9-468f-8e90-5fda6c81b9e2": "{{ page.capes.wurst }}",
+  "smksmk": "{{ page.capes.wurst }}",
+  "1cd0d4da-8d14-4c8d-8739-30c76c1cdd66": "{{ page.capes.wurst }}",
+  "ipaqmaster": "{{ page.capes.jj }}",
+  "de037b8a-4dba-4880-9f94-663ab3dac5e3": "{{ page.capes.jj }}",
+  "Ivantot": "{{ page.capes.wurst }}",
+  "c31449de-c257-47e9-bd0d-2c5e53979e38": "{{ page.capes.wurst }}",
+  "yinhzccxm": "{{ page.capes.wurst }}",
+  "099a282f-760e-4ffb-b765-59836b57da10": "{{ page.capes.wurst }}",
+  "CureSaba": "{{ page.capes.wurst }}",
+  "201ac3d0-5601-4129-9877-d9d7a65d6887": "{{ page.capes.wurst }}",
+  "FlashBxng": "{{ page.capes.flashbxng }}",
+  "c64e0a3b-763b-48df-8712-c975cf60e6a7": "{{ page.capes.flashbxng }}",
+  "Karataso": "{{ page.capes.wurst }}",
+  "5551f762-673b-43dc-8dc7-50819ae58028": "{{ page.capes.wurst }}",
 
   "use_new_server": false
 }

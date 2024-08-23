@@ -1,0 +1,59 @@
+{%- assign wiki = site.data.wikilinks -%}
+
+{%- if include.hacks -%}
+<details class="included-features">
+	<summary id="hacks">Hacks, Cheats, and Mods ({{ include.hacks.size }})</summary>
+	<ul>
+	{%- for hack in include.hacks -%}
+		<li>
+		{%- if wiki.hacks[hack] -%}
+			<a href="{{ wiki.hacks[hack] }}">{{ hack }}</a>
+		{%- else -%}
+			{{ hack }}
+		{%- endif -%}
+		</li>
+	{%- endfor -%}
+	</ul>
+</details>
+{%- endif -%}
+
+{%- if include.commands -%}
+<details class="included-features">
+	<summary id="commands">Chat Commands ({{ include.commands.size }})</summary>
+	<ul>
+	{%- for cmd in include.commands -%}
+		<li>
+		{%- if wiki.commands[cmd] -%}
+			<a href="{{ wiki.commands[cmd] }}"><code>{{ cmd }}</code></a>
+		{%- else -%}
+			<code>{{ cmd }}</code>
+		{%- endif -%}
+		</li>
+	{%- endfor -%}
+	</ul>
+</details>
+{%- endif -%}
+
+{%- if include.other -%}
+<details class="included-features">
+	<summary id="other">Other Features ({{ include.other.size }})</summary>
+	<ul>
+	{%- for other in include.other -%}
+		<li>
+		{%- if wiki.other[other] -%}
+			<a href="{{ wiki.other[other] }}">{{ other }}</a>
+		{%- else -%}
+			{{ other }}
+		{%- endif -%}
+		</li>
+	{%- endfor -%}
+	</ul>
+</details>
+{%- endif -%}
+
+{%- if page.log4shell-patched -%}
+<details class="included-features">
+	<summary id="safety">Safety</summary>
+	<p>&check; This version is safe from the <a href="https://wurst.wiki/log4shell">Log4Shell</a> exploit.</p>
+</details>
+{%- endif -%}

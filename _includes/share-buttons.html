@@ -1,19 +1,48 @@
-{% assign share-title = page.title | cgi_escape %}
-{% assign share-url = "https://www.wurstclient.net" | append: page.url | remove: "index.html" | uri_escape %}
-<nav class="tile-container">
-  <a href="https://twitter.com/intent/tweet?text={{ share-title }}&amp;url={{ share-url }}&amp;via=Wurst_Imperium" target="_blank" title="Tweet this page.">
-    <div class="tile-small bg-cyan fg-white">
-      <div class="tile-content iconic">
-        <span class="icon mif-twitter"></span>
-      </div>
-    </div>
-  </a>
-  <a href="/wurst-updates.xml" target="_blank" title="RSS feed of Wurst updates. (Atom XML format)
-Subscribe with an RSS reader to get notified of new Wurst updates.">
-    <div class="tile-small bg-gray fg-white">
-      <div class="tile-content iconic">
-        <span class="icon mif-feed3"></span>
-      </div>
-    </div>
-  </a>
-</nav>
+{%- assign share_title = page.title | cgi_escape -%}
+{%- assign share_url = "https://www.wurstclient.net" | append: page.url | remove: "index.html" | uri_escape -%}
+{%- capture twitter_href -%}https://twitter.com/intent/tweet?text={{ share_title }}&amp;url={{ share_url }}&amp;via=Wurst_Imperium{% endcapture -%}
+{%- capture rss_title -%}RSS feed of Wurst updates. (Atom XML format)
+Subscribe with an RSS reader to get notified of new Wurst updates.{%- endcapture -%}
+
+<div class="padding5 margin20 no-margin-left no-margin-right no-margin-top bg-grayLighter">
+	<nav class="tile-container">
+		<a href="{{ twitter_href }}" target="_blank" title="Tweet this page." data-analytics="Tweet Page">
+			<div class="tile-small bg-cyan fg-white">
+				<div class="tile-content iconic">
+					<span class="icon mif-twitter"></span>
+				</div>
+			</div>
+		</a>
+		<a href="/wurst-updates.xml" target="_blank" title="{{ rss_title }}" data-analytics="Open RSS Feed">
+			<div class="tile-small bg-orange fg-white">
+				<div class="tile-content iconic">
+					<span class="icon mif-feed3"></span>
+				</div>
+			</div>
+		</a>
+		{%- if page.wurstforum_thread -%}
+		{%- capture forum_href -%}https://wurstforum.net/d/{{ page.wurstforum_thread }}?utm_source=wurstclient.net&utm_medium=Wurst+update&utm_content=Wurst+{{ page.wurst-version }}{% endcapture -%}
+		<a href="{{ forum_href }}" target="_blank" title="Discuss this update on our forum." data-analytics="View Comments">
+			<div class="tile-small bg-lightBlue fg-white">
+				<div class="tile-content iconic">
+					<span class="icon mif-bubbles"></span>
+				</div>
+			</div>
+		</a>
+		{%- elsif page.kofi_url -%}
+		<a href="{{ page.kofi_url }}" target="_blank" title="Discuss this pre-release on Ko-fi." data-analytics="View Comments">
+			<div class="tile-small bg-lightBlue fg-white">
+				<div class="tile-content iconic">
+					<span class="icon mif-bubbles"></span>
+				</div>
+			</div>
+		{%- endif -%}
+		<a href="https://github.com/Wurst-Imperium/Wurst7" target="_blank" title="Star the project on GitHub." data-analytics="Press Star Button">
+			<div class="tile-small bg-gray fg-white">
+				<div class="tile-content iconic">
+					<span class="icon mif-star-full"></span>
+				</div>
+			</div>
+		</a>
+	</nav>
+</div>

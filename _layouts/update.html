@@ -1,78 +1,59 @@
 ---
-layout: default
-google_auto_ads: true
+layout: update_base
+google_adsense: true
 ---
-{%- assign date = page.date | date: "%Y-%m-%d" -%}
-{%- capture l2 -%}
-released {{ date | date: "%B %-d, %Y" }}
-{%- if page.modified_date and page.modified_date != date -%}
-	; updated {{ page.modified_date | date: "%B %-d, %Y" }}
-{%- endif -%}
-{%- endcapture -%}
-{%- include title.html l1 = page.title l2 = l2 -%}
-
-<div class="padding20 no-padding-left no-padding-right">
-	<div class="container post-content">
-
-		<div class="margin20 no-margin-left no-margin-right no-margin-top padding10 bg-grayDarker">
-			{%- include update/image.html -%}
-		</div>
-
-		<div class="margin20 no-margin-left no-margin-right no-margin-top">
-			{%- include share-buttons.html -%}
-		</div>
-
-		<div class="margin20 no-margin-left no-margin-right no-margin-top">
-			
-			{%- include update/log4shell-warnings.html -%}
-			
-			{%- if page.auto-list-mcversions -%}
-				<p>{%- include update/mcversions.html -%}</p>
-			{%- endif -%}
-			
-			{%- if page.log4shell-patched -%}
-				<p>✔ 此版本不受 <a href="https://wurst.wiki/log4shell">Log4Shell</a> 攻击.</p>
-			{%- endif -%}
-
-			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="4767558596" data-ad-format="auto" data-full-width-responsive="true"></ins>
-			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
+<section class="padding20 no-padding-left no-padding-right">
+	<div class="container">
+		{%- include update/image.html -%}
+		{%- include share-buttons.html -%}
+		{%- include update/log4shell-warnings.html -%}
+		{%- comment -%}{%- include wtp-survey.html -%}{%- endcomment -%}
+		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="4767558596" data-ad-format="auto" data-full-width-responsive="true"></ins>
+		<main class="margin20 no-margin-left no-margin-right no-margin-top">
+			{%- include update/mcversions.html -%}
 			{{- content -}}
-
-		</div>
-
+		</main>
 	</div>
-</div>
+</section>
 
-{%- if page.wurst-version and page.minecraft-versions -%}
-	<div class="bg-grayLighter padding40 no-padding-left no-padding-right">
-		<div class="container post-content">
-
-			<h2 id="downloads">下载</h2>
-			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5218363098774955" data-ad-slot="2601356415" data-ad-format="auto" data-full-width-responsive="true"></ins>
-			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-			{%- include update/downloads.html -%}
-
-		</div>
+<section class="padding40 no-padding-left no-padding-right bg-grayLighter">
+	<div class="container">
+		<h2 id="downloads">下载</h2>
+		{%- include update/ad-free-banner.html -%}
+		{%- include update/downloads.html -%}
 	</div>
-{%- endif -%}
+</section>
 
-<div class="padding20 no-padding-left no-padding-right">
-	<div class="container post-content">
-
-		<h2>相关教程</h2>
-		<ul>
-			{%- if page.fabric -%}
-				<li><p><a href="/tutorials/how-to-install/wurst-7/">如何安装Wurst 7</a></p></li>
-				<li><p><a href="/tutorials/wurst-7-baritone/">如何在Wurst 7中添加Baritone </a></p></li>
-			{%- else -%}
-				<li><p><a href="/tutorials/how-to-install/wurst-6/">如何为 Minecraft 1.8 - 1.12 安装 Wurst 6</a></p></li>
-				<li><p><a href="/tutorials/how-to-update/">如何为 Minecraft 1.8 - 1.12 手动更新 Wurst 6</a></p></li>
-			{%- endif -%}
-		</ul>
-
+{%- unless page.old-downloads or page.old-mcx -%}
+<section class="padding20 no-padding-left no-padding-right">
+	<div class="container">
+		{%- include update/installation.html -%}
 	</div>
-</div>
+</section>
+{%- endunless -%}
 
-{%- include update/schema.html -%}
-{%- include update/feedback-buttons.html -%}
+<script>
+let afa = localStorage.getItem("WurstAdFreeAccess") === "true";
+let h2downloads = document.querySelector("h2#downloads");
+if(!afa)
+	if(Math.random() < 0.5)
+	{
+		let afaPrompt = document.querySelector("#afa-prompt");
+		afaPrompt.style.display = "block";
+	}else
+	{
+		let bottomAd = document.createElement("ins");
+		bottomAd.classList.add("adsbygoogle");
+		bottomAd.style.display = "block";
+		bottomAd.setAttribute("data-ad-client", "ca-pub-5218363098774955");
+		bottomAd.setAttribute("data-ad-slot", "2601356415");
+		bottomAd.setAttribute("data-ad-format", "auto");
+		bottomAd.setAttribute("data-full-width-responsive", "true");
+		h2downloads.insertAdjacentElement("afterend", bottomAd);
+	}
+let ads = document.querySelectorAll("ins.adsbygoogle");
+if(afa)
+	ads.forEach(ad => ad.style.display = "none");
+else
+	ads.forEach(ad => (adsbygoogle = window.adsbygoogle || []).push({}));
+</script>

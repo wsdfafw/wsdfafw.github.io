@@ -2,10 +2,13 @@
 {%- capture basepath -%}v{{ page.wurst-version }}/Wurst-Client-v{{ page.wurst-version }}-MC{{ mcversion | replace: " ", "-" }}{%- endcapture -%}
 
 {{/*  find the latest version of Wurst for the given Minecraft version  */}}
+{%- assign latest = null -%}
 {%- for update in site.updates reversed -%}
 	{%- if update.minecraft-versions contains mcversion or update.snapshots contains mcversion -%}
-		{%- assign latest = update -%}
-		{%- break -%}
+		{%- unless update.wurst-version contains "pre" -%}
+			{%- assign latest = update -%}
+			{%- break -%}
+		{%- endunless -%}
 	{%- endif -%}
 {%- endfor -%}
 
@@ -34,7 +37,8 @@
 	{%- capture mainlink -%}{{ mcxbase }}{{ basepath }}.jar{%- endcapture -%}
 	{%- assign mainfile = mainlink | split: '/' | last -%}
 	<a class="command-button download"
-		href="{{ mainlink }}" rel="nofollow" target="_blank"
+		href="javascript:void(0)"
+		data-href="{{ mainlink }}"
 		data-analytics="Download Wurst"
 		data-analytics-version="{{ page.wurst-version }}"
 		data-analytics-mcversion="{{ mcversion }}"
@@ -61,7 +65,8 @@
 			{%- assign apifile = apilink | split: '/' | last -%}
 		{%- endif -%}
 		<a class="command-button"
-			href="{{ apilink }}" rel="nofollow" target="_blank"
+			href="javascript:void(0)"
+			data-href="{{ apilink }}"
 			data-analytics="Download Fabric API"
 			data-analytics-mirror="{{ mirror }}"
 			{% if mirror == "GitHub" -%}
@@ -91,7 +96,8 @@
 	<li>
 		{%- capture srclink -%}{{ mcxbase }}{{ basepath }}-sources.jar{%- endcapture -%}
 		{%- assign srcfile = srclink | split: '/' | last -%}
-		<a href="{{ srclink }}" rel="nofollow" target="_blank"
+		<a href="javascript:void(0)"
+			data-href="{{ srclink }}"
 			data-analytics="Download Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
@@ -107,7 +113,8 @@
 	<li>
 		{%- capture devlink -%}{{ mcxbase }}{{ basepath }}-dev.jar{%- endcapture -%}
 		{%- assign devfile = devlink | split: '/' | last -%}
-		<a href="{{ devlink }}" rel="nofollow" target="_blank"
+		<a href="javascript:void(0)"
+			data-href="{{ devlink }}"
 			data-analytics="Download Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
@@ -123,7 +130,8 @@
 	<li>
 		{%- capture srcdevlink -%}{{ mcxbase }}{{ basepath }}-sources-dev.jar{%- endcapture -%}
 		{%- assign srcdevfile = srcdevlink | split: '/' | last -%}
-		<a href="{{ srcdevlink }}" rel="nofollow" target="_blank"
+		<a href="javascript:void(0)"
+			data-href="{{ srcdevlink }}"
 			data-analytics="Download Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"

@@ -1,0 +1,9 @@
+<details class="included-features">
+	<summary id="default-keybinds">Default Keybinds ({{ include.keybinds.binds.size }})</summary>
+	<p>{{ include.keybinds.preface }}</p>
+	<ul>
+	{% for keybind in include.keybinds.binds %}
+		<li><kbd>{{ keybind[0] }}</kbd> &rarr; {{ keybind[1] }}</li>
+	{% endfor %}
+	</ul>
+</details>

@@ -2,7 +2,7 @@
 title: Wurst客户端教程
 description: How to use Wurst like a BOSS!
 permalink: /tutorials/
-google_auto_ads: true
+google_adsense: true
 ---
 {% include title.html l1 = page.title l2 = page.description %}
 
