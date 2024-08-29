@@ -1,6 +1,6 @@
 v1_1_beta:
   preface: |-
-    In this ancient version, keybinds cannot be changed. You're stuck with the default keybinds.
+    在这个古老版本中，快捷键无法更改。你只能使用默认的快捷键。
   binds:
     C: Fullbright
     F: FastPlace
@@ -12,19 +12,19 @@ v1_1_beta:
 
 since_v6:
   preface: |-
-    These are the default keybinds when you first install Wurst.
-    All of them are <a href="https://wurst.wiki/keybind_manager">fully&nbsp;customizable</a>!
+    这些是首次安装Wurst时的默认快捷键。
+    所有快捷键都可以在 <a href="https://wurst.wiki/keybind_manager">快捷键管理器</a> 中进行完全自定义！
   binds:
-    B: FastPlace &amp; FastBreak
-    C: Fullbright
-    G: Flight
+    B: FastPlace &amp; FastBreak(快速放置 &amp; 快速破坏)
+    C: Fullbright(夜视)
+    G: Flight(飞行)
     Ö: SpeedNuker
     H: /home
     J: Jesus
     K: MultiAura
     Left CTRL: Navigator
     N: Nuker
-    R: Killaura
+    R: Killaura(杀戮光环)
     Right CTRL: ClickGUI
     Right SHIFT: Navigator
     U: Freecam
@@ -36,15 +36,15 @@ since_v7:
     These are the default keybinds when you first install Wurst.
     All of them are <a href="https://wurst.wiki/keybind_manager">fully&nbsp;customizable</a>!
   binds:
-    B: FastPlace &amp; FastBreak
-    C: Fullbright
-    G: Flight
+    B: FastPlace &amp; FastBreak(快速放置 &amp; 快速破坏)
+    C: Fullbright(夜视)
+    G: Flight(飞行)
     ";": SpeedNuker
     H: /home
     J: Jesus
     K: MultiAura
     N: Nuker
-    R: Killaura
+    R: Killaura(杀戮光环)
     Right CTRL: ClickGUI
     Right SHIFT: Navigator
     U: Freecam
