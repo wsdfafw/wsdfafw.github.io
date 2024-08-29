@@ -38,15 +38,15 @@ screenshots:
 <section class="padding20 no-padding-left no-padding-right bg-grayLighter">
 	<div class="container align-center">
 		<p class="text-accent">
-			Wurst is a client-side utility mod designed to supercharge your Minecraft experience. Equipped with a vast arsenal of cheats, hacks, and other utilities, the Wurst Client ensures that you'll always have the upper edge in your Minecraft adventures.
+			Wurst 是一个客户端实用工具模组，旨在为您的 Minecraft 体验提供超能力。配备丰富的作弊、黑客和其他实用工具，Wurst 客户端确保您在 Minecraft 冒险中始终占据优势。
 		</p>
 	</div>
 </section>
 <section class="padding20 no-padding-left no-padding-right" id="screenshots">
 	<div class="container">
 		<div class="padding10 no-padding-left no-padding-right align-center">
-			<h2>Screenshot Gallery</h2>
-			<p>Click on any image to view it in full size.</p>
+			<h2>截图画廊</h2>
+			<p>点击任何图片以全尺寸查看。</p>
 		</div>
 		<div class="padding10 no-padding-left no-padding-right">
 			<div class="wurst-grid">
@@ -54,7 +54,7 @@ screenshots:
 				{%- assign fullsize-image = screenshot | replace: '_540p.webp', '.jpg' -%}
 				{%- assign filename = fullsize-image | replace: 'https://images.wurstclient.net/_media/update/', '' -%}
 				<article>
-					<a href="{{ fullsize-image }}" target="_blank" title="File: {{ filename }}" data-analytics="Screenshot Gallery: Expand Image" data-analytics-image="{{ filename }}">
+					<a href="{{ fullsize-image }}" target="_blank" title="文件: {{ filename }}" data-analytics="截图画廊: 扩展图片" data-analytics-image="{{ filename }}">
 						<img src="{{ screenshot }}" loading="lazy" alt="{{ filename }}" width="640" height="360">
 					</a>
 				</article>
@@ -65,17 +65,17 @@ screenshots:
 </section>
 <section class="padding20 no-padding-left no-padding-right bg-grayLighter" id="features">
 	<div class="container align-center">
-		<h2>Features ({{ features.cheats.size | plus: features.commands.size | plus: features.other.size }})</h2>
+		<h2>功能 ({{ features.cheats.size | plus: features.commands.size | plus: features.other.size }})</h2>
 		<p>
-			A full list of Wurst's features can be found below.<br>
-			Note that not all of these features are available in all Minecraft versions.
+			以下是Wurst的所有功能的完整列表。<br>
+			请注意，并非所有这些功能在所有Minecraft版本中都可用。
 		</p>
 	</div>
 </section>
 <section class="padding20 no-padding-left no-padding-right">
 	<div class="container">
 		<div class="padding10 no-padding-left no-padding-right">
-			<h3>Cheats ({{ features.cheats.size }})</h3>
+			<h3>作弊 ({{ features.cheats.size }})</h3>
 		</div>
 		<div class="padding10 no-padding-left no-padding-right">
 			<ul class="wurst-grid list cells5" style="gap: 2px 20px">
@@ -95,7 +95,7 @@ screenshots:
 <section class="padding20 no-padding-left no-padding-right bg-grayLighter">
 	<div class="container">
 		<div class="padding10 no-padding-left no-padding-right">
-			<h3>Commands ({{ features.commands.size }})</h3>
+			<h3>命令 ({{ features.commands.size }})</h3>
 		</div>
 		<div class="padding10 no-padding-left no-padding-right">
 			<ul class="wurst-grid list cells5" style="gap: 2px 20px">
@@ -115,7 +115,7 @@ screenshots:
 <section class="padding20 no-padding-left no-padding-right">
 	<div class="container">
 		<div class="padding10 no-padding-left no-padding-right">
-			<h3>Other Features ({{ features.other.size }})</h3>
+			<h3>其他功能 ({{ features.other.size }})</h3>
 		</div>
 		<div class="padding10 no-padding-left no-padding-right">
 			<ul class="wurst-grid list" style="gap: 2px 20px">
@@ -135,10 +135,10 @@ screenshots:
 <section class="padding40 no-padding-left no-padding-right bg-grayLighter" id="keybinds">
 	<div class="container">
 		<div class="align-center padding10 no-padding-left no-padding-right no-padding-top">
-			<h2>Default Keybinds ({{ default_keybinds.binds.size }})</h2>
+			<h2>默认快捷键 ({{ default_keybinds.binds.size }})</h2>
 			<p>
 				{{ default_keybinds.preface }}<br>
-				Note that Minecraft versions before 1.14 have slightly different defaults.
+				请注意，Minecraft 1.14之前的版本默认快捷键略有不同。
 			</p>
 		</div>
 		<ul class="wurst-grid list" style="gap: 2px 20px">
@@ -151,12 +151,12 @@ screenshots:
 <section class="padding20 no-padding-left no-padding-right" id="testimonials">
 	<div class="container">
 		<div class="padding10 no-padding-left no-padding-right">
-			<h2 class="align-center">Players Agree: Wurst Changes the Game</h2>
+			<h2 class="align-center">玩家一致认为：Wurst改变了游戏</h2>
 		</div>
 		<div class="wurst-grid cells2 centered">
 			<figure class="no-margin">
 				<blockquote class="text-accent">
-					<p>The Wurst Hacked Client puts you in the driver's seat!</p>
+					<p>Wurst Hacked Client让你成为驾驶者！</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>WiZARD HAX</cite></p>
@@ -164,7 +164,7 @@ screenshots:
 			</figure>
 			<figure class="no-margin">
 				<blockquote class="text-accent">
-					<p>The Wurst Client is one of, if not the best Minecraft hack.</p>
+					<p>Wurst Client是，如果不是最好的Minecraft hack之一。</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>mchacks.net</cite></p>
@@ -172,7 +172,7 @@ screenshots:
 			</figure>
 			<figure class="no-margin">
 				<blockquote class="text-accent">
-					<p>For those who relish in survival mode, this client is a godsend!</p>
+					<p>对于那些喜欢生存模式的人来说，这个客户端是救星！</p>
 				</blockquote>
 				<figcaption>
 					<p>&mdash; <cite>thebluecrusader</cite></p>
@@ -181,24 +181,24 @@ screenshots:
 		</div>
 		<div class="align-center">
 			<p>
-				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star Wurst-Imperium/Wurst7 on GitHub">Star</a>
-				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="Watch Wurst-Imperium/Wurst7 on GitHub">Watch</a>
-				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork Wurst-Imperium/Wurst7 on GitHub">Fork</a>
+				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="在GitHub上为Wurst-Imperium/Wurst7加星标">Star</a>
+				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7/subscription" data-icon="octicon-eye" data-size="large" data-show-count="true" aria-label="在GitHub上关注Wurst-Imperium/Wurst7">Watch</a>
+				<a class="github-button" href="https://github.com/Wurst-Imperium/Wurst7/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="在GitHub上派生Wurst-Imperium/Wurst7">Fork</a>
 			</p>
-			<img src="https://api.star-history.com/svg?repos=Wurst-Imperium/Wurst7&type=Date" alt="Star History of Wurst-Imperium/Wurst7" loading="lazy" width="800" height="553">
+			<img src="https://api.star-history.com/svg?repos=Wurst-Imperium/Wurst7&type=Date" alt="Wurst-Imperium/Wurst7的星标历史" loading="lazy" width="800" height="553">
 		</div>
 	</div>
 </section>
 <section class="padding40 no-padding-left no-padding-right bg-grayLighter">
 	<div class="container align-center">
-		<h2>So what are you waiting for?</h2>
+		<h2>你还在等什么呢？</h2>
 		<p class="text-accent">
-			Download the Wurst Client today and enhance your gameplay like never before!
+			立即下载Wurst客户端，以前所未有的方式增强你的游戏体验！
 		</p>
 		<p>
-			<a class="command-button primary shadow" href="/download/" style="padding-top: 1rem;padding-bottom: 1rem;" data-analytics="Main Page: CTA Click" data-analytics-button="Download Wurst bottom">
+			<a class="command-button primary shadow" href="/download/" style="padding-top: 1rem;padding-bottom: 1rem;" data-analytics="主页：CTA 点击" data-analytics-button="底部下载Wurst">
 				<span class="icon mif-download2"></span>
-				Download Wurst
+				下载Wurst
 			</a>
 		</p>
 	</div>
