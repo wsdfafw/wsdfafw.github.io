@@ -33,8 +33,8 @@ since_v6:
 
 since_v7:
   preface: |-
-    These are the default keybinds when you first install Wurst.
-    All of them are <a href="https://wurst.wiki/keybind_manager">fully&nbsp;customizable</a>!
+    这些是首次安装Wurst时的默认快捷键。
+    所有快捷键都可以在 <a href="https://wurst.wiki/keybind_manager">快捷键管理器</a> 中进行完全自定义！
   binds:
     B: FastPlace &amp; FastBreak(快速放置 &amp; 快速破坏)
     C: Fullbright(夜视)
