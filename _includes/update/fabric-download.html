@@ -1,7 +1,7 @@
 {%- capture full-version -%}v{{ page.wurst-version }} MC{{ mcversion }}{%- endcapture -%}
 {%- capture basepath -%}v{{ page.wurst-version }}/Wurst-Client-v{{ page.wurst-version }}-MC{{ mcversion | replace: " ", "-" }}{%- endcapture -%}
 
-{{/*  find the latest version of Wurst for the given Minecraft version  */}}
+{{/*  查找给定Minecraft版本的最新Wurst版本  */}}
 {%- assign latest = null -%}
 {%- for update in site.updates reversed -%}
 	{%- if update.minecraft-versions contains mcversion or update.snapshots contains mcversion -%}
@@ -12,14 +12,14 @@
 	{%- endif -%}
 {%- endfor -%}
 
-{{/*  if there is a newer version of Wurst for the given Minecraft version, display a warning  */}}
+{{/*  如果给定Minecraft版本有更新版本的Wurst，显示警告  */}}
 {%- if latest and page != latest -%}
 <div class="bg-amber padding5">
 	<div class="bg-white padding10">
 		<p class="no-margin-top no-margin-bottom">
-			<b>IMPORTANT:</b> You are currently viewing Wurst {{ page.wurst-version }}, which is an older version for Minecraft {{ mcversion }}. For optimal performance and the latest features, we recommend downloading
+			<b>重要提示：</b> 您当前查看的是Wurst {{ page.wurst-version }}，这是针对Minecraft {{ mcversion }} 的旧版本。为了获得最佳性能和最新功能，我们建议下载
 			<b><a href="{{ latest.url }}?mc={{ mcversion }}"
-				data-analytics="Old Version Warning: Link Click"
+				data-analytics="旧版本警告：链接点击"
 				data-analytics-oldversion="{{ page.wurst-version }}"
 				data-analytics-newversion="{{ latest.wurst-version }}"
 				data-analytics-mcversion="{{ mcversion }}"
@@ -27,7 +27,7 @@
 			>
 				Wurst {{ latest.wurst-version }} MC{{ mcversion }}
 			</a></b>
-			instead.
+			作为替代。
 		</p>
 	</div>
 </div>
@@ -39,7 +39,7 @@
 	<a class="command-button download"
 		href="javascript:void(0)"
 		data-href="{{ mainlink }}"
-		data-analytics="Download Wurst"
+		data-analytics="下载Wurst"
 		data-analytics-version="{{ page.wurst-version }}"
 		data-analytics-mcversion="{{ mcversion }}"
 		data-analytics-mcversiontype="{{ mcversion-type }}"
@@ -49,8 +49,8 @@
 		data-analytics-file="{{ mainfile }}"
 	>
 		<span class="icon mif-file-download"></span>
-		Wurst Client {{ full-version }}
-		<small>File: {{ mainfile }}</small>
+		Wurst客户端 {{ full-version }}
+		<small>文件：{{ mainfile }}</small>
 	</a>
 
 	{%- if page.fabric-api -%}
@@ -67,7 +67,7 @@
 		<a class="command-button"
 			href="javascript:void(0)"
 			data-href="{{ apilink }}"
-			data-analytics="Download Fabric API"
+			data-analytics="下载Fabric API"
 			data-analytics-mirror="{{ mirror }}"
 			{% if mirror == "GitHub" -%}
 				data-analytics-version="{{ apiversion_short }}"
@@ -80,25 +80,25 @@
 			data-analytics-wurstversion="{{ page.wurst-version }}"
 			data-analytics-wurstversionmc="{{ page.wurst-version }} MC{{ mcversion }}"
 		>
-			<img src="https://images.wurstclient.net/_media/icon/fabric.png" width="52" height="56" alt="Fabric icon" class="icon">
+			<img src="https://images.wurstclient.net/_media/icon/fabric.png" width="52" height="56" alt="Fabric图标" class="icon">
 			Fabric API
 			{% if mirror == "GitHub" -%}
 				<small>v{{ apiversion }}</small>
 			{%- else -%}
-				<small>for Minecraft {{ mcversion }}</small>
+				<small>适用于Minecraft {{ mcversion }}</small>
 			{%- endif -%}
 		</a>
 	{%- endif -%}
 </p>
 
-<p>附加文件:</p>
+<p>附加文件：</p>
 <ul class="spaced-list">
 	<li>
 		{%- capture srclink -%}{{ mcxbase }}{{ basepath }}-sources.jar{%- endcapture -%}
 		{%- assign srcfile = srclink | split: '/' | last -%}
 		<a href="javascript:void(0)"
 			data-href="{{ srclink }}"
-			data-analytics="Download Wurst"
+			data-analytics="下载Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
 			data-analytics-mcversiontype="{{ mcversion-type }}"
@@ -115,7 +115,7 @@
 		{%- assign devfile = devlink | split: '/' | last -%}
 		<a href="javascript:void(0)"
 			data-href="{{ devlink }}"
-			data-analytics="Download Wurst"
+			data-analytics="下载Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
 			data-analytics-mcversiontype="{{ mcversion-type }}"
@@ -132,7 +132,7 @@
 		{%- assign srcdevfile = srcdevlink | split: '/' | last -%}
 		<a href="javascript:void(0)"
 			data-href="{{ srcdevlink }}"
-			data-analytics="Download Wurst"
+			data-analytics="下载Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
 			data-analytics-mcversiontype="{{ mcversion-type }}"
