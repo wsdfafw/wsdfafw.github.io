@@ -3,7 +3,7 @@
 <aside>
 {%- if include.hacks -%}
 <details class="included-features">
-	<summary id="hacks">Hacks, Cheats, and Mods ({{ include.hacks.size }})</summary>
+	<summary id="hacks">黑客、作弊与模组 ({{ include.hacks.size }})</summary>
 	<ul>
 	{%- for hack in include.hacks -%}
 		<li>
@@ -20,7 +20,7 @@
 
 {%- if include.commands -%}
 <details class="included-features">
-	<summary id="commands">Chat Commands ({{ include.commands.size }})</summary>
+	<summary id="commands">聊天命令 ({{ include.commands.size }})</summary>
 	<ul>
 	{%- for cmd in include.commands -%}
 		<li>
@@ -37,7 +37,7 @@
 
 {%- if include.other -%}
 <details class="included-features">
-	<summary id="other">Other Features ({{ include.other.size }})</summary>
+	<summary id="other">其他特性 ({{ include.other.size }})</summary>
 	<ul>
 	{%- for other in include.other -%}
 		<li>
@@ -54,8 +54,8 @@
 
 {%- if page.log4shell-patched -%}
 <details class="included-features">
-	<summary id="safety">Safety</summary>
-	<p>&check; This version is safe from the <a href="https://wurst.wiki/log4shell">Log4Shell</a> exploit.</p>
+	<summary id="safety">安全性</summary>
+	<p>&check; 此版本已修复 <a href="https://wurst.wiki/log4shell">Log4Shell</a> 漏洞。</p>
 </details>
 {%- endif -%}
 </aside>
