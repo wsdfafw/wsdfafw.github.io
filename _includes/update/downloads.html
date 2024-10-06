@@ -9,7 +9,7 @@
 
 <noscript>
 	<p class="padding10 text-bold ribbed-amber">
-		This page requires JavaScript to work properly. Please enable JavaScript in your browser settings.
+		此页面需要JavaScript才能正常工作。请在浏览器设置中启用JavaScript。
 	</p>
 </noscript>
 
@@ -31,14 +31,14 @@
 		{%- for mcversion in page.minecraft-versions -%}
 		<div data-mcversion="{{ mcversion }}" class="padding10 no-padding-left no-padding-right">
 			{%- capture mcversion-range -%}{%- unless site.mcversions[mcversion] -%}{{ mcversion }}{%- else -%}{{ site.mcversions[mcversion] }}{%- endunless -%}{%- endcapture -%}
-			<h3>for Minecraft {{ mcversion-range }} + Fabric</h3>
+			<h3>适用于Minecraft {{ mcversion-range }} + Fabric</h3>
 			{%- include update/fabric-download.html -%}
 		</div>
 		{%- endfor -%}
 
 		{%- if page.snapshots -%}
 		<div data-mcversion="snapshot" class="padding10 no-padding-left no-padding-right">
-			<h3>对于《我的世界》快照</h3>
+			<h3>适用于《我的世界》快照</h3>
 			<div style="display: grid;grid-template-columns: 1fr;">
 				{%- assign mcversion-type = "snapshot" -%}
 				{%- for mcversion in page.snapshots -%}
@@ -71,7 +71,7 @@
 {%- endif -%}
 
 <script>
-// handle mc and snapshot parameters
+// 处理mc和snapshot参数
 let urlParams = new URLSearchParams(window.location.search);
 let mc = urlParams.get("mc") || urlParams.get("snapshot");
 if (mc) {
@@ -87,7 +87,7 @@ if (mc) {
 	mcversionElements.forEach(element => element.style.gridRow = "1");
 }
 
-// handle download button clicks
+// 处理下载按钮点击事件
 document.querySelectorAll('a[data-href]').forEach(element => {
 	element.addEventListener('click', e => openDataHref(e, element.getAttribute('data-href')));
 	element.addEventListener('auxclick', e => openDataHref(e, element.getAttribute('data-href')));
@@ -98,10 +98,10 @@ function openDataHref(event, dataHref) {
 	window.open(dataHref, '_blank');
 }
 
-// find download buttons
-let mainDownloadButtons = document.querySelectorAll('a[data-analytics="Download Wurst"][data-analytics-type="main"]');
+// 查找下载按钮
+let mainDownloadButtons = document.querySelectorAll('a[data-analytics="下载Wurst"][data-analytics-type="main"]');
 
-// track download count, first download time and paid/free status
+// 跟踪下载次数、第一次下载时间和付费/免费状态
 let downloadCount = parseInt(localStorage.getItem('WurstDownloadCount')) || 0;
 downloadCount = Math.max(0, Math.min(downloadCount, 21));
 function getTimeSinceFirstDownload() {
@@ -111,14 +111,14 @@ function getTimeSinceFirstDownload() {
 	const weeks = Math.floor(days / 7);
 	const months = Math.floor(days / 30);
 	if(days < 1)
-		return '<1 day';
+		return '<1天';
 	if(weeks < 1)
-		return `${days} day${days === 1 ? '' : 's'}`;
+		return `${days}天${days === 1 ? '' : 's'}`;
 	if(months < 1)
-		return `${weeks} week${weeks === 1 ? '' : 's'}`;
+		return `${weeks}周${weeks === 1 ? '' : 's'}`;
 	if(months < 12)
-		return `${months} month${months === 1 ? '' : 's'}`;
-	return '>1 year';
+		return `${months}个月${months === 1 ? '' : 's'}`;
+	return '>1年';
 }
 const hasAdFreeAccess = localStorage.getItem('WurstAdFreeAccess') === "true";
 function updateDownloadCountAttribute() {
@@ -150,7 +150,7 @@ if (downloadCount <= 20) {
 	});
 }
 
-// track whether the visitor uses an adblocker
+// 跟踪访问者是否使用广告拦截器
 if (!hasAdFreeAccess) {
 	let adBlockerDetected = false;
 	let adSenseScript = document.querySelector('script[src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5218363098774955"]');
