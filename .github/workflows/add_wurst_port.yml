@@ -1,0 +1,47 @@
+# 当现有的 Wurst 客户端更新被移植到新的 Minecraft 版本时，添加必要的 Jekyll 元数据。
+name: 添加 Wurst 移植
+run-name: 为 ${{ github.event.inputs.mc_version }} 添加 Wurst ${{ github.event.inputs.wurst_version }} 版本
+
+on:
+  workflow_dispatch:
+    inputs:
+      wurst_version:
+        description: "Wurst 版本（不带 v 或 -MC）"
+        required: true
+      mc_version:
+        description: "Minecraft 版本"
+        required: true
+      fapi_version:
+        description: "Fabric API 版本"
+        required: true
+
+jobs:
+  update-post:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: _scripts/requirements.txt
+
+      - name: 安装依赖
+        run: |
+          pip install -r _scripts/requirements.txt
+
+      - name: 运行 add_wurst_port.py
+        run: |
+          python _scripts/add_wurst_port.py "${{ github.event.inputs.wurst_version }}" "${{ github.event.inputs.mc_version }}" "${{ github.event.inputs.fapi_version }}"
+
+      - name: 提交更改
+        run: |
+          git config --local user.email "contact.wurstimperium@gmail.com"
+          git config --local user.name "Wurst-Bot"
+          git add _updates/
+          git commit -m "[Wurst-Bot] 移植 Wurst ${{ github.event.inputs.wurst_version }} 到 Minecraft ${{ github.event.inputs.mc_version }}"
+          git push
