@@ -33,6 +33,8 @@ def update_wurst_post(wurst_version, mc_version, fapi_version):
 				reverse=True,
 			)
 	else:
+		if "minecraft-versions" not in front_matter:
+			front_matter["minecraft-versions"] = []
 		if mc_version not in front_matter["minecraft-versions"]:
 			front_matter["minecraft-versions"].append(mc_version)
 			front_matter["minecraft-versions"].sort(
@@ -40,19 +42,21 @@ def update_wurst_post(wurst_version, mc_version, fapi_version):
 				reverse=True,
 			)
 
-    # 更新 Fabric API 版本
-    if mc_version not in front_matter["fabric-api"]:
-        front_matter["fabric-api"][mc_version] = fapi_version
-        front_matter["fabric-api"] = dict(
-            sorted(
-                front_matter["fabric-api"].items(),
-                key=lambda item: (
-                    version_info[item[0]]["type"] == "release",
-                    version_info[item[0]]["releaseTime"],
-                ),
-                reverse=True,
-            )
-        )
+	# Update Fabric API versions
+	if "fabric-api" not in front_matter:
+		front_matter["fabric-api"] = {}
+	if mc_version not in front_matter["fabric-api"]:
+		front_matter["fabric-api"][mc_version] = fapi_version
+		front_matter["fabric-api"] = dict(
+			sorted(
+				front_matter["fabric-api"].items(),
+				key=lambda item: (
+					version_info[item[0]]["type"] == "release",
+					version_info[item[0]]["releaseTime"],
+				),
+				reverse=True,
+			)
+		)
 
 	util.write_front_matter(post.path, front_matter)
 
