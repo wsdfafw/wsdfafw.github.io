@@ -2,6 +2,7 @@ import json
 import os
 import requests
 from dataclasses import dataclass
+from datetime import datetime
 from io import StringIO
 from pathlib import Path
 from ruamel.yaml import YAML
@@ -20,6 +21,15 @@ class JekyllPost:
 
 	def get_update_url(self) -> str:
 		return f"https://www.wurstclient.net/updates/wurst-{self.front_matter['wurst-version'].replace('.', '-')}/"
+
+	def get_date(self) -> datetime:
+		return datetime.strptime(self.path.name[:10], "%Y-%m-%d")
+
+	def get_wurst_version(self) -> str:
+		return self.front_matter["wurst-version"]
+
+	def get_mc_versions(self) -> list[str]:
+		return self.front_matter.get("minecraft-versions", [])
 
 
 @dataclass
@@ -52,17 +62,16 @@ def write_front_matter(path: Path, front_matter: CommentedMap):
 	path.write_text(new_content, encoding="utf-8")
 
 
-def get_wurst_update_posts() -> Iterator[Path]:
+def get_wurst_update_posts() -> Iterator[JekyllPost]:
 	"""Get all Wurst update post paths."""
 	for post_path in Path("_updates").rglob("????-??-??-Wurst-*.md"):
 		if post_path.is_file():
-			yield post_path
+			yield read_post(post_path)
 
 
 def find_wurst_update_post(version: str) -> JekyllPost:
 	"""Find and read the Wurst update post for a specific version."""
-	for post_path in get_wurst_update_posts():
-		post = read_post(post_path)
+	for post in get_wurst_update_posts():
 		if post.front_matter["wurst-version"] == version:
 			return post
 
