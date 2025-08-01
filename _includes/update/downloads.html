@@ -27,11 +27,11 @@
 {%- elsif page.fabric -%}
 	<div class="padding10 no-padding-left no-padding-right" style="display: grid;grid-template-columns: 1fr;">
 
-		{%- assign mcversion-type = "release" -%}
+		{%- assign mcversion_type = "release" -%}
 		{%- for mcversion in page.minecraft-versions -%}
 		<div data-mcversion="{{ mcversion }}" class="padding10 no-padding-left no-padding-right">
-			{%- capture mcversion-range -%}{%- unless site.mcversions[mcversion] -%}{{ mcversion }}{%- else -%}{{ site.mcversions[mcversion] }}{%- endunless -%}{%- endcapture -%}
-			<h3>适用于Minecraft {{ mcversion-range }} + Fabric</h3>
+			{%- capture mcversion_range -%}{%- unless site.mcversions[mcversion] -%}{{ mcversion }}{%- else -%}{{ site.mcversions[mcversion] }}{%- endunless -%}{%- endcapture -%}
+			<h3>for Minecraft {{ mcversion_range }} + Fabric</h3>
 			{%- include update/fabric-download.html -%}
 		</div>
 		{%- endfor -%}
@@ -40,7 +40,7 @@
 		<div data-mcversion="snapshot" class="padding10 no-padding-left no-padding-right">
 			<h3>适用于《我的世界》快照</h3>
 			<div style="display: grid;grid-template-columns: 1fr;">
-				{%- assign mcversion-type = "snapshot" -%}
+				{%- assign mcversion_type = "snapshot" -%}
 				{%- for mcversion in page.snapshots -%}
 				<details data-snapshot="{{ mcversion }}">
 					<summary>{{ mcversion }} (单击以展开)</summary>
@@ -87,19 +87,8 @@ if (mc) {
 	mcversionElements.forEach(element => element.style.gridRow = "1");
 }
 
-// 处理下载按钮点击事件
-document.querySelectorAll('a[data-href]').forEach(element => {
-	element.addEventListener('click', e => openDataHref(e, element.getAttribute('data-href')));
-	element.addEventListener('auxclick', e => openDataHref(e, element.getAttribute('data-href')));
-});
-function openDataHref(event, dataHref) {
-	if(event.type === 'auxclick' && event.button !== 1)
-		return;
-	window.open(dataHref, '_blank');
-}
-
-// 查找下载按钮
-let mainDownloadButtons = document.querySelectorAll('a[data-analytics="下载Wurst"][data-analytics-type="main"]');
+// find download buttons
+let mainDownloadButtons = document.querySelectorAll('a[data-analytics="Download Wurst"][data-analytics-type="main"]');
 
 // 跟踪下载次数、第一次下载时间和付费/免费状态
 let downloadCount = parseInt(localStorage.getItem('WurstDownloadCount')) || 0;
@@ -175,5 +164,23 @@ if (!hasAdFreeAccess) {
 		adBlockerDetected = true;
 		updateAdBlockerAttribute();
 	}
+}
+
+if(!hasAdFreeAccess && localStorage.getItem("WurstAdBlockerDetected") === "true") {
+	document.querySelectorAll("a[data-loot]").forEach(element => {
+		element.setAttribute("data-href", element.getAttribute("data-loot"));
+		element.setAttribute("data-analytics-lootlink", "true");
+	});
+}
+
+// handle download button clicks
+document.querySelectorAll('a[data-href]').forEach(element => {
+	element.addEventListener('click', e => openDataHref(e, element.getAttribute('data-href')));
+	element.addEventListener('auxclick', e => openDataHref(e, element.getAttribute('data-href')));
+});
+function openDataHref(event, dataHref) {
+	if(event.type === 'auxclick' && event.button !== 1)
+		return;
+	window.open(dataHref, '_blank');
 }
 </script>

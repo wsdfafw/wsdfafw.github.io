@@ -1,4 +1,4 @@
-{%- capture full-version -%}v{{ page.wurst-version }} MC{{ mcversion }}{%- endcapture -%}
+{%- capture full_version -%}v{{ page.wurst-version }} MC{{ mcversion }}{%- endcapture -%}
 {%- capture basepath -%}v{{ page.wurst-version }}/Wurst-Client-v{{ page.wurst-version }}-MC{{ mcversion | replace: " ", "-" }}{%- endcapture -%}
 
 {{/*  查找给定Minecraft版本的最新Wurst版本  */}}
@@ -12,8 +12,14 @@
 	{%- endif -%}
 {%- endfor -%}
 
-{{/*  如果给定Minecraft版本有更新版本的Wurst，显示警告  */}}
+{{/*  determine if current page is an outdated version  */}}
+{%- assign isOutdated = false -%}
 {%- if latest and page != latest -%}
+	{%- assign isOutdated = true -%}
+{%- endif -%}
+
+{{/*  if there is a newer version of Wurst for the given Minecraft version, display a warning  */}}
+{%- if isOutdated -%}
 <div class="bg-amber padding5">
 	<div class="bg-white padding10">
 		<p class="no-margin-top no-margin-bottom">
@@ -23,7 +29,7 @@
 				data-analytics-oldversion="{{ page.wurst-version }}"
 				data-analytics-newversion="{{ latest.wurst-version }}"
 				data-analytics-mcversion="{{ mcversion }}"
-				data-analytics-mcversiontype="{{ mcversion-type }}"
+				data-analytics-mcversiontype="{{ mcversion_type }}"
 			>
 				Wurst {{ latest.wurst-version }} MC{{ mcversion }}
 			</a></b>
@@ -34,23 +40,28 @@
 {%- endif -%}
 
 <p>
-	{%- capture mainlink -%}{{ mcxbase }}{{ basepath }}.jar{%- endcapture -%}
-	{%- assign mainfile = mainlink | split: '/' | last -%}
+	{%- capture mainText -%}Wurst Client {{ full_version }}{%- endcapture -%}
+	{%- capture mainLink -%}{{ mcxbase }}{{ basepath }}.jar{%- endcapture -%}
+	{%- capture mainLoot -%}https://api.wurstclient.net/loot/?to={{ mainLink | uri_escape }}&title={{ mainText | uri_escape }}{%- endcapture -%}
+	{%- assign mainFile = mainLink | split: '/' | last -%}
 	<a class="command-button download"
 		href="javascript:void(0)"
-		data-href="{{ mainlink }}"
-		data-analytics="下载Wurst"
+		data-href="{{ mainLink }}"
+		{%- if mcversion_type == "release" %} data-loot="{{ mainLoot }}"{%- endif %}
+		data-analytics="Download Wurst"
 		data-analytics-version="{{ page.wurst-version }}"
 		data-analytics-mcversion="{{ mcversion }}"
-		data-analytics-mcversiontype="{{ mcversion-type }}"
+		data-analytics-mcversiontype="{{ mcversion_type }}"
 		data-analytics-modloader="Fabric"
 		data-analytics-type="main"
 		data-analytics-mirror="GitHub"
-		data-analytics-file="{{ mainfile }}"
+		data-analytics-file="{{ mainFile }}"
+		data-analytics-lootlink="false"
+		data-analytics-outdated="{{ isOutdated }}"
 	>
 		<span class="icon mif-file-download"></span>
-		Wurst客户端 {{ full-version }}
-		<small>文件：{{ mainfile }}</small>
+		{{ mainText }}
+		<small>文件: {{ mainFile }}</small>
 	</a>
 
 	{%- if page.fabric-api -%}
@@ -76,9 +87,11 @@
 				data-analytics-url="{{ apilink }}"
 			{%- endif %}
 			data-analytics-mcversion="{{ mcversion }}"
-			data-analytics-mcversiontype="{{ mcversion-type }}"
+			data-analytics-mcversiontype="{{ mcversion_type }}"
 			data-analytics-wurstversion="{{ page.wurst-version }}"
 			data-analytics-wurstversionmc="{{ page.wurst-version }} MC{{ mcversion }}"
+			data-analytics-lootlink="false"
+			data-analytics-outdated="{{ isOutdated }}"
 		>
 			<img src="https://images.wurstclient.net/_media/icon/fabric.png" width="52" height="56" alt="Fabric图标" class="icon">
 			Fabric API
@@ -101,11 +114,13 @@
 			data-analytics="下载Wurst"
 			data-analytics-version="{{ page.wurst-version }}"
 			data-analytics-mcversion="{{ mcversion }}"
-			data-analytics-mcversiontype="{{ mcversion-type }}"
+			data-analytics-mcversiontype="{{ mcversion_type }}"
 			data-analytics-modloader="Fabric"
 			data-analytics-type="sources"
 			data-analytics-mirror="GitHub"
 			data-analytics-file="{{ srcfile }}"
+			data-analytics-lootlink="false"
+			data-analytics-outdated="{{ isOutdated }}"
 		>
 			{{ srcfile }}
 		</a>
