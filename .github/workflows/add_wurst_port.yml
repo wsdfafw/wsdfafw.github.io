@@ -1,6 +1,6 @@
-# 当现有的 Wurst 客户端更新被移植到新的 Minecraft 版本时，添加必要的 Jekyll 元数据。
-name: 添加 Wurst 移植
-run-name: 为 ${{ github.event.inputs.mc_version }} 添加 Wurst ${{ github.event.inputs.wurst_version }} 版本
+# Adds the necessary Jekyll metadata when an existing Wurst Client update is ported to a new Minecraft version.
+name: Add Wurst Port
+run-name: Add Wurst ${{ inputs.wurst_version }} build for ${{ inputs.mc_version }}
 
 on:
   workflow_dispatch:
@@ -15,28 +15,24 @@ on:
         description: "Fabric API 版本"
         required: true
       distinct_id:
-        description: "Automatically set by the return-dispatch action (leave blank if running manually)"
         required: false
-
-permissions:
-  # To push the automated commit.
-  contents: write
-  # To trigger the Jekyll workflow.
-  actions: write
 
 jobs:
   update_post:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Echo distinct ID ${{ github.event.inputs.distinct_id }}
-      run: echo ${{ github.event.inputs.distinct_id }}
+    - name: Echo distinct ID ${{ inputs.distinct_id }}
+      run: echo ${{ inputs.distinct_id }}
 
     - name: 检出仓库
       uses: actions/checkout@v5
+      with:
+        # So that the jekyll workflow runs automatically.
+        token: ${{ secrets.WURSTCLIENT_NET_PUBLISH_TOKEN }}
 
     - name: 设置 Python
-      uses: actions/setup-python@v5
+      uses: actions/setup-python@v6
       with:
         python-version: "3.12"
         cache: "pip"
@@ -48,35 +44,16 @@ jobs:
     - name: 运行 add_wurst_port.py
       run: |
         python _scripts/add_wurst_port.py \
-          "${{ github.event.inputs.wurst_version }}" \
-          "${{ github.event.inputs.mc_version }}" \
-          "${{ github.event.inputs.fapi_version }}"
+          "${{ inputs.wurst_version }}" \
+          "${{ inputs.mc_version }}" \
+          "${{ inputs.fapi_version }}"
 
     - name: 提交更改
       run: |
-        WURST_VERSION=${{ github.event.inputs.wurst_version }}
-        MC_VERSION=${{ github.event.inputs.mc_version }}
+        WURST_VERSION=${{ inputs.wurst_version }}
+        MC_VERSION=${{ inputs.mc_version }}
         git config --local user.email "contact.wurstimperium@gmail.com"
         git config --local user.name "Wurst-Bot"
         git add .
         git commit -m "[Wurst-Bot] 移植 Wurst $WURST_VERSION 到 Minecraft $MC_VERSION"
         git push
-
-    - name: Trigger Jekyll workflow
-      id: jekyll_dispatch
-      uses: codex-/return-dispatch@v2
-      with:
-        token: ${{ github.token }}
-        owner: Wurst-Imperium
-        repo: WurstClient.net
-        ref: gh-pages
-        workflow: jekyll.yml
-
-    - name: Wait for Jekyll workflow to finish (run ${{ steps.jekyll_dispatch.outputs.run_id }})
-      uses: codex-/await-remote-run@v1
-      with:
-        token: ${{ github.token }}
-        owner: Wurst-Imperium
-        repo: WurstClient.net
-        run_id: ${{ steps.jekyll_dispatch.outputs.run_id }}
-        run_timeout_seconds: 300  # 5 minutes

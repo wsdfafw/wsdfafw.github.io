@@ -8,22 +8,22 @@ google_adsense: true
 
 <div class="padding20 no-padding-left no-padding-right bg-grayLighter">
 	<div class="container">
-		<h2 class="text-normal">Installation</h2>
+		<h2 class="text-normal">安装</h2>
 		<div class="grid no-margin">
 			<div class="row cells2">
 				<div class="cell">
-					<h3 class="text-normal">for Minecraft <b>1.14.2 - {{ site.latest_mcversion }}</b></h3>
+					<h3 class="text-normal">适用于 Minecraft <b>1.14.2- {{ site.latest_mcversion }}</b></h3>
 					<ul>
-						<li><p><a href="how-to-install/wurst-7/">How to install Wurst 7</a></p></li>
-						<li><p><a href="how-to-uninstall/wurst-7/">How to uninstall Wurst 7</a></p></li>
+						<li><p><a href="how-to-install/wurst-7/">如何安装 Wurst 7</a></p></li>
+						<li><p><a href="how-to-uninstall/wurst-7/">如何卸载 Wurst 7</a></p></li>
 					</ul>
 				</div>
 				<div class="cell">
-					<h3 class="text-normal">for Minecraft <b>1.7.2 - 1.12.2</b></h3>
+					<h3 class="text-normal">>适用于 Minecraft <b>1.7.2 - 1.12.2</b></h3>
 					<ul>
-						<li><p><a href="how-to-install/wurst-6/">How to install Wurst 6</a></p></li>
-						<li><p><a href="how-to-uninstall/wurst-6/">How to uninstall Wurst 6</a></p></li>
-						<li><p><a href="how-to-update/">How to update Wurst 6</a></p></li>
+						<li><p><a href="how-to-install/wurst-6/">如何安装 Wurst 6</a></p></li>
+						<li><p><a href="how-to-uninstall/wurst-6/">如何卸载 Wurst 6</a></p></li>
+						<li><p><a href="how-to-update/">如何更新 Wurst 6</a></p></li>
 					</ul>
 				</div>
 			</div>
@@ -32,6 +32,15 @@ google_adsense: true
 </div>
 
 <div class="padding20 no-padding-left no-padding-right">
+	<div class="container">
+		<h2 class="text-normal">快照版本</h2>
+		<ul>
+			<li><p><a href="snapshot-notifications/">如何在Wurst更新到新快照版本时获得通知</a></p></li>
+		</ul>
+	</div>
+</div>
+
+<div class="padding20 no-padding-left no-padding-right bg-grayLighter">
     <div class="container">
         <h2 class="text-normal">物品复制</h2>
         <ul>
@@ -41,7 +50,7 @@ google_adsense: true
     </div>
 </div>
 
-<div class="padding20 no-padding-left no-padding-right bg-grayLighter">
+<div class="padding20 no-padding-left no-padding-right">
     <div class="container">
         <h2 class="text-normal">强制 OP</h2>
         <ul>
@@ -52,7 +61,7 @@ google_adsense: true
     </div>
 </div>
 
-<div class="padding20 no-padding-left no-padding-right">
+<div class="padding20 no-padding-left no-padding-right bg-grayLighter">
     <div class="container">
         <h2 class="text-normal">使用功能</h2>
         <ul>
@@ -64,7 +73,7 @@ google_adsense: true
     </div>
 </div>
 
-<div class="padding20 no-padding-left no-padding-right bg-grayLighter">
+<div class="padding20 no-padding-left no-padding-right">
     <div class="container">
         <h2 class="text-normal">故障排除</h2>
         <ul>
@@ -75,7 +84,7 @@ google_adsense: true
     </div>
 </div>
 
-<div class="padding40 no-padding-left no-padding-right">
+<div class="padding40 no-padding-left no-padding-right bg-grayLighter">
     <div class="container">
         <h2 class="align-center text-light">需要其他帮助吗？ <a href="/contact/">联系我！</a></h2>
     </div>
